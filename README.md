@@ -51,14 +51,30 @@ down, unreachable, or you have blocked it, the tree still builds and the corner 
 the only server dependency in the project, it is optional, and it is 60 lines
 ([`server.py`](counts-relay.py)).
 
+## The map
+
+The bounty asked, as a bonus, for a game that reveals where a poster grew up. Nothing public says
+that. Rather than invent it, the map reveals the one location Farcaster actually carries:
+`USER_DATA_TYPE_LOCATION`, a `geo:lat,lon` string the poster typed into their own profile. In the
+example tree 35 of 82 casts have one; the rest simply have no pin, and the page says in both
+places it could mislead you that this is a self-declared *current* location — not where anyone
+grew up, and not where the photo was taken.
+
+The game is the same data played backwards. Five rounds: here is a plate, click where on Earth
+you think it was posted from, get the great-circle distance you were off by. A skipped round
+reveals the answer and scores nothing, so the average is over the rounds actually played.
+
 ## Files
+
+
 
 | | |
 |---|---|
-| `index.html` | the entire app — crawler, layout, renderer, 33 KB, zero dependencies |
+| `index.html` | the entire app — crawler, layout, renderer, map, zero dependencies |
 | `crawl.js` | the same crawl as a Node script, for building a prebuilt example tree |
 | `deepen.js` | second pass over the nodes an ordinary crawl left short (see below) |
 | `counts-relay.py` | the `quoteCount` relay, extracted from the site's server |
+| `locs.js` | adds self-declared profile locations to a tree.json, for the map |
 | `smoke.mjs` | headless-Chrome test at 1280×800 and 390×844 |
 | `tree.json` | the prebuilt example |
 
@@ -84,6 +100,7 @@ against the public hubs with no configuration. To build a prebuilt example:
 ```
 node crawl.js https://farcaster.xyz/czar/0x3db99055 > tree.json
 node deepen.js tree.json 40
+node locs.js tree.json
 node smoke.mjs http://localhost:8000/
 ```
 
@@ -101,6 +118,9 @@ Things that cost me time, written down so they don't cost you any:
   `/v2/followers` pages 50 at a time against a 500-request hourly budget — one popular account
   would eat the whole thing.
 - Popular casts have tens of thousands of likers. Paginate with `nextPageToken` and expect it.
+- Profiles can carry `USER_DATA_TYPE_LOCATION` as `geo:lat,lon`. 58 of 75 authors in the example
+  tree have the *message*; only 34 have a non-empty value, so treat "has a location" and "declared
+  a location" as different questions.
 - **`castsByParent` never tells you it is done.** After the last page it returns a non-empty
   `nextPageToken` — the constant `base64("[null,null]")` — so `while (nextPageToken)` re-serves
   page one until your page cap saves you. It is silent: nothing errors, you just get the same
