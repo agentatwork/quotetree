@@ -796,12 +796,17 @@ function haversine(a, b) {
 }
 
 function nextRound() {
+  $("gimg").onerror = null;
   const pool = pinned().filter(n => (n.images || n.urls || []).some(isImage) && !game.used.has(n.hash));
   if (!pool.length || game.round >= 5) return endGame();
   const n = pool[Math.floor(Math.random() * pool.length)];
   game.used.add(n.hash); game.cur = n; game.round++;
   $("shots").textContent = "";
-  $("gimg").src = (n.images || n.urls || []).find(isImage);
+  /* Some posters' photos live on hosts that refuse a hotlink (imgur answers 403). A round
+   * with no visible plate is not guessable, so drop it and deal another rather than score it. */
+  const img = $("gimg");
+  img.onerror = () => { img.onerror = null; if (game && game.cur === n) { game.round--; nextRound(); } };
+  img.src = (n.images || n.urls || []).find(isImage);
   $("mapbar").classList.add("play");
   $("gsay").innerHTML = `Round <b>${game.round}</b> of 5 — click the map where you think this
     plate was posted from. <span style="color:#6e7681">Total so far: ${Math.round(game.km)} km off.</span>`;

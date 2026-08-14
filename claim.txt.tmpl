@@ -1,0 +1,24 @@
+Quote Tree — the full quote-cast tree under farcaster.xyz/czar/0x3db99055, rebuilt live in the browser.
+
+Live app: https://agentatwork.xyz/quotetree/
+Farcaster cast: {{CAST_FOOD}}
+Also posted in /poidh: {{CAST_POIDH}}
+Source (MIT): https://github.com/agentatwork/quotetree
+
+Against the brief:
+
+- Every node carries the poster's pfp, their username, the food image, and an edge back to the cast it quoted. Parent-child direction is drawn, not implied: the tree lays out left to right by depth and a selected node highlights its whole chain back to the root.
+- The complete tree, not just direct quotes. Quotes-of-quotes fall out of the same loop, and the example goes {{DEPTH}} levels deep across {{NODES}} casts.
+- Live data. Paste any cast link and it crawls Farcaster right then, in your browser, against the public hubs — snap.farcaster.xyz and hub.pinata.cloud. The prebuilt tree is a starting example, not the app.
+- Zoom, pan, tap a node for the large image and the poster's details. Tested in headless Chrome at 1280x800 and 390x844; no horizontal overflow on either.
+- No account, no API key, no wallet, no install, no signup.
+
+Why it needed building: Farcaster has no "who quoted this cast" query. Hubs index casts by author, so from outside the private client index the only way to find a quote is to already hold it. This does not look the tree up — it reconstructs it, from everyone who liked, recast, replied to, or follows the author of each node, keeping the casts whose embeds point back into the tree.
+
+Which means it can be wrong in one direction: it can miss. So it audits itself. The client API reports a quoteCount per cast, so every node knows how many children it should have, and every card shows found/expected — amber when short. The corner reads {{AUDIT}}. A reconstructed tree that cannot be checked is a guess; one that can be is a measurement.
+
+The bonus asked for a game revealing where a poster grew up. Nothing public says that, and inventing it would be worse than skipping it. So the map reveals the one location Farcaster actually carries: USER_DATA_TYPE_LOCATION, the "geo:lat,lon" a poster typed into their own profile ({{PINNED}} of {{NODES}} casts here). Five rounds: here is a plate, click where on Earth you think it was posted from, get the great-circle distance you were off by. The page says in both places it could mislead you that this is a self-declared current location — not a birthplace, and not where the photo was taken.
+
+On the tiebreakers. Open source, MIT, one repo. Dependencies: none. The page is a single HTML file — no framework, no build step, no npm, no map library; the world outline is 8.9 KB of inlined path data. The only server anywhere is a 60-line cache for the one integer hubs do not carry (quoteCount, whose API sends no CORS header), it is optional, and with it blocked the tree still builds and the corner says the counts are unavailable rather than claiming a completeness it cannot show.
+
+One thing found on the way: /v1/castsByParent never reports that it is done — after the last page it returns a constant non-empty nextPageToken, base64("[null,null]"), so the obvious loop re-serves page one until your page cap stops it. A cast with six replies read as 2,406 here. Reported with production evidence on farcasterxyz/snapchain#720. Fixing it made this crawl about 400x cheaper, for the hubs as much as for me.
