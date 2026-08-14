@@ -128,6 +128,11 @@ async function user(fid) {
       if (b.type === "USER_DATA_TYPE_USERNAME") rec.username = b.value;
       if (b.type === "USER_DATA_TYPE_DISPLAY") rec.display = b.value;
       if (b.type === "USER_DATA_TYPE_PFP") rec.pfp = b.value;
+      // self-declared "geo:lat,lon"; see locs.js, which backfills it for the whole tree
+      if (b.type === "USER_DATA_TYPE_LOCATION") {
+        const m = /^geo:(-?\d+(?:\.\d+)?),(-?\d+(?:\.\d+)?)/.exec(b.value || "");
+        if (m && Math.abs(+m[1]) <= 90 && Math.abs(+m[2]) <= 180) rec.loc = { lat: +m[1], lon: +m[2] };
+      }
     }
   } catch {}
   return rec;

@@ -1,0 +1,5 @@
+Claim for bounty #1317 — the food quote-cast tree.
+
+Farcaster has no "who quoted this" index, so the app rebuilds one in your browser from public hubs. No account, no key, no backend, zero deps, MIT.
+
+Each node shows found/expected, so you can see what it missed: 81/90 here.

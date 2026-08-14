@@ -601,6 +601,7 @@ function select(hash) {
        <dt>depth</dt><dd>${n.depth} — ${n.depth === 0 ? "the original" : n.depth === 1 ? "a direct quote" : "a quote of a quote"}</dd>
        <dt>quoted by</dt><dd>${n.found}${n.quoteCount == null ? "" : " of " + n.quoteCount}${gap ? " · the rest are not reachable from public data" : ""}</dd>
        ${n.parent && byHash.get(n.parent) ? `<dt>quotes</dt><dd>@${esc(byHash.get(n.parent).author.username)}</dd>` : ""}
+       ${n.author.loc ? `<dt>says they are</dt><dd>${n.author.loc.lat.toFixed(2)}, ${n.author.loc.lon.toFixed(2)} — self-declared, on the <a href="#" data-act="map">map</a></dd>` : ""}
        <dt>cast</dt><dd>${short}</dd>
      </dl>
      <div class="links">
@@ -612,6 +613,8 @@ function select(hash) {
 }
 
 $("detailBody").addEventListener("click", e => {
+  const m = e.target.closest('a[data-act="map"]');
+  if (m) { e.preventDefault(); if (!mapOn) $("mapbtn").click(); return; }
   const b = e.target.closest("button[data-act]");
   if (!b) return;
   const n = byHash.get(b.dataset.h);
