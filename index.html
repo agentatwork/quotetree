@@ -1,0 +1,698 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Quote Tree — the whole quote-cast tree of any Farcaster cast</title>
+<meta name="description" content="Zoom, pan and pick through the complete quote-cast tree under a Farcaster cast — quotes of quotes included — rebuilt live from public hubs in your browser, and audited against how many quotes each cast says it has.">
+<meta property="og:title" content="Quote Tree">
+<meta property="og:description" content="The complete quote-cast tree of any Farcaster cast, rebuilt from public hubs in your browser. No account, no API key.">
+<meta property="og:image" content="https://agentatwork.xyz/quotetree/card.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path d='M11 16h6M17 16V8h5M17 16h5M17 16v8h5' stroke='%2330363d' stroke-width='2' fill='none'/><circle cx='7' cy='16' r='4' fill='%233fb950'/><circle cx='25' cy='8' r='3' fill='%2379c0ff'/><circle cx='25' cy='16' r='3' fill='%2379c0ff'/><circle cx='25' cy='24' r='3' fill='%2379c0ff'/></svg>">
+<style>
+  :root { --bg:#0d1117; --panel:#161b22; --line:#30363d; --fg:#e6edf3; --dim:#8b949e;
+          --accent:#79c0ff; --ok:#3fb950; --warn:#d29922; }
+  * { box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+  html,body { margin:0; height:100%; overflow:hidden; background:var(--bg); color:var(--fg);
+    font:15px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif; }
+  #stage { position:fixed; inset:0; touch-action:none; cursor:grab; }
+  #stage.drag { cursor:grabbing; }
+  svg { width:100%; height:100%; display:block; }
+  .edge { fill:none; stroke:#3d444d; stroke-width:2; }
+  .edge.hi { stroke:var(--accent); stroke-width:3; }
+  .card { cursor:pointer; }
+  .card rect.frame { fill:var(--panel); stroke:var(--line); stroke-width:1.5; rx:10; }
+  .card:hover rect.frame { stroke:#586069; }
+  .card.sel rect.frame { stroke:var(--accent); stroke-width:2.5; }
+  .card.root rect.frame { stroke:var(--ok); }
+  .card text.name { font-size:12px; fill:var(--dim); }
+  .card text.sub { font-size:10px; fill:#6e7681; }
+  .card text.sub.short { fill:var(--warn); }
+  .card text.body { font-size:10px; fill:#8b949e; }
+
+  header { position:fixed; left:0; right:0; top:0; padding:9px 12px 20px; z-index:6;
+    background:linear-gradient(#0d1117f5,#0d1117d8 55%,#0d111700); pointer-events:none; }
+  header .row { display:flex; gap:8px; align-items:center; flex-wrap:wrap; pointer-events:auto; }
+  header h1 { margin:0 4px 0 0; font-size:15px; font-weight:600; white-space:nowrap; }
+  header h1 span { color:var(--dim); font-weight:400; font-size:13px; }
+  #q { flex:1 1 250px; min-width:160px; padding:7px 10px; border-radius:8px; font-size:13px;
+    background:#0d1117; color:var(--fg); border:1px solid var(--line); font-family:inherit; }
+  #q:focus { outline:none; border-color:var(--accent); }
+  header button, #hud button, #prog button { background:var(--panel); color:var(--fg);
+    border:1px solid var(--line); border-radius:8px; cursor:pointer; font-family:inherit; }
+  header button { padding:7px 11px; font-size:13px; }
+  header button:hover, #hud button:hover { background:#21262d; }
+  header button.go { border-color:#2f5d8a; color:var(--accent); }
+  header label { font-size:12px; color:var(--dim); display:flex; align-items:center; gap:4px;
+    cursor:pointer; white-space:nowrap; }
+  header .note { font-size:11.5px; color:var(--dim); margin:5px 2px 0; pointer-events:auto; }
+  header .note a { color:var(--accent); }
+
+  #hud { position:fixed; left:10px; bottom:10px; z-index:5; display:flex; gap:6px; }
+  #hud button { width:38px; height:38px; font-size:17px; }
+
+  #prog { position:fixed; left:50%; top:50%; transform:translate(-50%,-50%); z-index:8;
+    background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:16px 20px;
+    width:min(360px,88vw); display:none; }
+  #prog.on { display:block; }
+  #prog h3 { margin:0 0 9px; font-size:14px; font-weight:600; }
+  #prog .bar { height:6px; background:#21262d; border-radius:3px; overflow:hidden; }
+  #prog .bar i { display:block; height:100%; width:0; background:var(--accent); transition:width .25s; }
+  #prog p { margin:9px 0 0; font-size:12px; color:var(--dim); min-height:2.6em; }
+  #prog button { margin-top:10px; padding:5px 10px; font-size:12px; }
+
+  #detail { position:fixed; right:0; top:0; bottom:0; width:min(370px,100%); z-index:10;
+    background:var(--panel); border-left:1px solid var(--line); overflow-y:auto;
+    transform:translateX(101%); transition:transform .18s ease-out; }
+  #detail.open { transform:none; }
+  #detail .pad { padding:14px 16px 28px; }
+  #detail img.media { width:100%; border-radius:10px; display:block; background:#21262d; margin-bottom:6px; }
+  #detail .who { display:flex; align-items:center; gap:10px; margin:12px 0 8px; }
+  #detail .who img { width:42px; height:42px; border-radius:50%; background:#21262d; flex:none; }
+  #detail .who b { display:block; font-size:15px; }
+  #detail .who span { color:var(--dim); font-size:13px; }
+  #detail p.text { white-space:pre-wrap; margin:8px 0; word-break:break-word; }
+  #detail dl { display:grid; grid-template-columns:auto 1fr; gap:5px 12px; font-size:13px;
+    color:var(--dim); margin:14px 0 0; }
+  #detail dt { color:#6e7681; }
+  #detail dd { margin:0; }
+  #detail .links { margin-top:14px; display:flex; gap:14px; flex-wrap:wrap; }
+  #detail .links a, #detail .links button { color:var(--accent); font-size:13px; background:none;
+    border:none; padding:0; cursor:pointer; font-family:inherit; }
+  #detail a.url { color:var(--accent); font-size:12px; word-break:break-all; }
+  #close { position:absolute; right:8px; top:8px; width:32px; height:32px; border-radius:8px;
+    background:#21262dcc; border:1px solid var(--line); color:var(--fg); font-size:15px; cursor:pointer; }
+
+  #audit { position:fixed; right:10px; bottom:10px; z-index:5; max-width:46vw; font-size:11px;
+    color:var(--dim); text-align:right; line-height:1.55; }
+  #audit b { color:var(--ok); } #audit b.part { color:var(--warn); }
+  #toast { position:fixed; left:50%; bottom:16px; transform:translateX(-50%); z-index:20;
+    background:#21262d; border:1px solid var(--line); border-radius:8px; padding:8px 14px;
+    font-size:13px; max-width:80vw; opacity:0; transition:opacity .2s; pointer-events:none; }
+  #toast.on { opacity:1; }
+  @media (max-width:700px) {
+    #detail { width:100%; }
+    #audit { max-width:56vw; }
+    header .note { display:none; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="row">
+    <h1>Quote&nbsp;Tree <span id="rootline">loading…</span></h1>
+    <input id="q" placeholder="paste a farcaster.xyz cast link" spellcheck="false" autocapitalize="off">
+    <label title="Also scan everyone who follows each cast's author. Much slower; finds the quoters who never liked or replied."><input type="checkbox" id="deep"> deep</label>
+    <button class="go" id="load">build tree</button>
+    <button id="featured" title="a prebuilt, fully audited example">example</button>
+  </div>
+  <div class="note">Drag to pan · scroll or pinch to zoom · tap a card to open it. Built in your
+    browser from public Farcaster hubs — no account, no API key.
+    <a href="https://github.com/agentatwork/quotetree" target="_blank" rel="noopener">source</a></div>
+</header>
+
+<div id="stage"><svg id="svg"><g id="world"></g></svg></div>
+
+<div id="hud">
+  <button id="zin" title="zoom in">+</button>
+  <button id="zout" title="zoom out">−</button>
+  <button id="fit" title="fit to screen">⤢</button>
+</div>
+
+<div id="audit"></div>
+<div id="toast"></div>
+
+<div id="prog">
+  <h3 id="progTitle">Building the tree…</h3>
+  <div class="bar"><i id="progBar"></i></div>
+  <p id="progText"></p>
+  <button id="cancel">stop and draw what I have</button>
+</div>
+
+<aside id="detail">
+  <button id="close" aria-label="close">✕</button>
+  <div class="pad" id="detailBody"></div>
+</aside>
+
+<script>
+"use strict";
+/* ============================================================================
+ * Quote Tree — MIT — github.com/agentatwork/quotetree
+ *
+ * Farcaster has no "who quoted this cast" query. Hubs index casts by author, so from
+ * the outside the only way to find a quote is to already be holding it. This page
+ * therefore reconstructs the tree rather than looking it up: gather every account
+ * plausibly near a cast — everyone who liked it, recast it, replied to it, and
+ * optionally everyone who follows its author — pull those accounts' recent casts, and
+ * keep the ones whose embeds point at a cast already in the tree. Repeat until nothing
+ * new turns up. Quotes of quotes fall out of the same loop, which is the whole point.
+ *
+ * The honest part is the audit. Farcaster's client API reports a quoteCount per cast,
+ * so every node knows how many children it *should* have; each card shows found/expected
+ * and the corner shows the total. A reconstructed tree that cannot be checked is a
+ * guess. One that can be is a measurement.
+ * ========================================================================== */
+
+const HUBS = ["https://snap.farcaster.xyz:3381", "https://hub.pinata.cloud"];
+const EPOCH = 1609459200;               // Farcaster timestamps count seconds from 2021-01-01
+const COUNTS = "counts";                // optional quoteCount relay; absent → audit says so
+const CARD_W = 138, CARD_H = 152, GAP_Y = 16, GAP_X = 78;
+const SVGNS = "http://www.w3.org/2000/svg";
+const IMG_RE = /\.(jpe?g|png|gif|webp|avif)(\?|$)/i;
+
+const el = (n, a = {}) => { const e = document.createElementNS(SVGNS, n);
+  for (const k in a) e.setAttribute(k, a[k]); return e; };
+const $ = id => document.getElementById(id);
+const esc = s => String(s == null ? "" : s).replace(/[&<>"']/g,
+  c => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;" }[c]));
+const trunc = (s, n) => (s || "").length > n ? s.slice(0, n - 1) + "…" : (s || "");
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+const isImage = u => IMG_RE.test(u) || /imagedelivery\.net|i\.imgur\.com|i\.redd\.it/.test(u);
+
+/* -------------------------------------------------------------- hub client */
+let hubIdx = 0, cancelled = false;
+async function hub(path) {
+  let err;
+  for (let i = 0; i < HUBS.length * 3; i++) {
+    const base = HUBS[(hubIdx + i) % HUBS.length];
+    try {
+      const r = await fetch(base + path);
+      if (r.status === 429) { await sleep(600 * (i + 1)); continue; }
+      if (!r.ok) throw new Error("HTTP " + r.status);
+      return await r.json();
+    } catch (e) { err = e; hubIdx++; }
+  }
+  throw err || new Error("no hub answered");
+}
+
+async function pool(items, n, fn) {
+  const it = items[Symbol.iterator]();
+  await Promise.all(Array.from({ length: n }, async () => {
+    for (let x = it.next(); !x.done; x = it.next()) { if (cancelled) return; await fn(x.value); }
+  }));
+}
+
+async function hubPaged(path, cap) {
+  const out = [];
+  let pt = "";
+  do {
+    const d = await hub(path + (pt ? "&pageToken=" + pt : ""));
+    out.push(...(d.messages || []));
+    pt = d.nextPageToken;
+  } while (pt && out.length < cap && !cancelled);
+  return out;
+}
+
+const readCast = m => {
+  const b = m.data.castAddBody || {};
+  return {
+    hash: m.hash.toLowerCase(), fid: m.data.fid, ts: (m.data.timestamp + EPOCH) * 1000,
+    text: b.text || "",
+    quoted: (b.embeds || []).filter(e => e.castId).map(e => e.castId.hash.toLowerCase()),
+    urls: (b.embeds || []).filter(e => e.url).map(e => e.url),
+  };
+};
+
+const profiles = new Map();
+async function profile(fid) {
+  if (profiles.has(fid)) return profiles.get(fid);
+  const rec = { fid, username: String(fid), display: "", pfp: "" };
+  profiles.set(fid, rec);
+  try {
+    const d = await hub(`/v1/userDataByFid?fid=${fid}`);
+    for (const m of d.messages || []) {
+      const b = m.data.userDataBody;
+      if (b.type === "USER_DATA_TYPE_USERNAME") rec.username = b.value;
+      else if (b.type === "USER_DATA_TYPE_DISPLAY") rec.display = b.value;
+      else if (b.type === "USER_DATA_TYPE_PFP") rec.pfp = b.value;
+    }
+  } catch {}
+  return rec;
+}
+
+/* The hubs carry every cast but not the number of casts that quote one. That single
+ * figure lives in Farcaster's own client API, which sends no CORS header, so a browser
+ * cannot read it directly. If the small relay at COUNTS answers it fills the expected
+ * counts in; if it does not, the tree still renders and the audit says plainly that the
+ * expected numbers were unavailable. Nothing structural depends on it. */
+const quoteCounts = new Map();
+async function expectedCounts(hashes) {
+  const want = hashes.filter(h => !quoteCounts.has(h));
+  for (let i = 0; i < want.length; i += 40) {
+    try {
+      const r = await fetch(COUNTS + "?hashes=" + want.slice(i, i + 40).join(","));
+      if (!r.ok) return;
+      const d = await r.json();
+      for (const k in d) if (typeof d[k] === "number") quoteCounts.set(k.toLowerCase(), d[k]);
+    } catch { return; }
+  }
+}
+
+/* ------------------------------------------- resolve whatever was pasted in */
+async function resolve(input) {
+  const s = input.trim().replace(/^@/, "");
+  const m = s.match(/(?:farcaster\.xyz|warpcast\.com)\/([^\/\s?#]+)\/(0x[0-9a-fA-F]+)/i)
+         || s.match(/^([A-Za-z0-9_.\-]+)\/(0x[0-9a-fA-F]+)$/);
+  if (!m) throw new Error("paste a whole cast link, e.g. farcaster.xyz/czar/0x3db99055");
+  const name = m[1], hash = m[2].toLowerCase();
+
+  const proof = await hub(`/v1/userNameProofByName?name=${encodeURIComponent(name)}`);
+  const fid = proof && proof.fid;
+  if (!fid) throw new Error("no account named " + name);
+  if (hash.length === 42) return { fid, hash };
+
+  // farcaster.xyz links carry a truncated hash; expand it from the author's own casts
+  const msgs = await hubPaged(`/v1/castsByFid?fid=${fid}&pageSize=100&reverse=true`, 2000);
+  const hit = msgs.find(x => x.hash.toLowerCase().startsWith(hash));
+  if (!hit) throw new Error("that cast is not in @" + name + "'s recent history");
+  return { fid, hash: hit.hash.toLowerCase() };
+}
+
+/* ---------------------------------------------------------------- the crawl */
+async function crawl(rootFid, rootHash, deep, onProgress) {
+  const t0 = Date.now();
+  const d = await hub(`/v1/castById?fid=${rootFid}&hash=${rootHash}`);
+  if (d.error || !d.data) throw new Error("no public hub is holding that cast");
+  const root = readCast(d);
+
+  const nodes = new Map([[root.hash, Object.assign({}, root, { parent: null })]]);
+  const seeded = new Set(), scanned = new Set(), quoters = [];
+  let fidsSeen = 0;
+
+  for (let round = 1; round <= 4 && !cancelled; round++) {
+    const cands = new Set();
+    for (const n of [...nodes.values()]) {
+      if (seeded.has(n.hash) || cancelled) continue;
+      seeded.add(n.hash);
+      cands.add(n.fid);
+      const [likes, recasts, replies] = await Promise.all([
+        hubPaged(`/v1/reactionsByCast?target_fid=${n.fid}&target_hash=${n.hash}&reaction_type=Like&pageSize=100`, 5000).catch(() => []),
+        hubPaged(`/v1/reactionsByCast?target_fid=${n.fid}&target_hash=${n.hash}&reaction_type=Recast&pageSize=100`, 5000).catch(() => []),
+        hubPaged(`/v1/castsByParent?fid=${n.fid}&hash=${n.hash}&pageSize=100`, 2000).catch(() => []),
+      ]);
+      for (const m of likes) cands.add(m.data.fid);
+      for (const m of recasts) cands.add(m.data.fid);
+      for (const m of replies) cands.add(m.data.fid);
+      if (deep) {
+        const f = await hubPaged(`/v1/linksByTargetFid?target_fid=${n.fid}&link_type=follow&pageSize=1000`, 30000).catch(() => []);
+        for (const m of f) cands.add(m.data.fid);
+      }
+      onProgress({ phase: `round ${round} · finding the accounts near ${nodes.size} cast${nodes.size === 1 ? "" : "s"}`,
+                   done: 0, total: 0, nodes: nodes.size });
+    }
+    const todo = [...cands].filter(f => !scanned.has(f));
+    if (!todo.length) break;
+    fidsSeen += todo.length;
+
+    let done = 0;
+    await pool(todo, 10, async fid => {
+      scanned.add(fid);
+      try {
+        const msgs = await hubPaged(`/v1/castsByFid?fid=${fid}&pageSize=100&reverse=true`, 1000);
+        for (const m of msgs) {
+          const c = readCast(m);
+          if (c.ts < root.ts - 6e4) break;      // reverse order: everything past here is older
+          if (c.quoted.length) quoters.push(c);
+        }
+      } catch {}
+      if (++done % 5 === 0 || done === todo.length)
+        onProgress({ phase: `round ${round} · reading ${todo.length.toLocaleString()} accounts`,
+                     done, total: todo.length, nodes: nodes.size });
+    });
+
+    // join repeatedly, so a quote of a quote of a quote resolves without another round trip
+    let grew = true, added = 0;
+    while (grew) {
+      grew = false;
+      for (const c of quoters) {
+        if (nodes.has(c.hash)) continue;
+        const parent = c.quoted.find(h => nodes.has(h));
+        if (!parent) continue;
+        nodes.set(c.hash, Object.assign({}, c, { parent }));
+        grew = true; added++;
+      }
+    }
+    if (!added && round > 1) break;
+  }
+
+  onProgress({ phase: "loading profiles", done: 0, total: 0, nodes: nodes.size });
+  await pool([...new Set([...nodes.values()].map(n => n.fid))], 10, f => profile(f));
+  await expectedCounts([...nodes.keys()]);
+
+  const list = [...nodes.values()].map(n => Object.assign({}, n, {
+    quoteCount: quoteCounts.has(n.hash) ? quoteCounts.get(n.hash) : null,
+    author: profiles.get(n.fid), found: 0,
+  }));
+  for (const n of list) n.found = list.filter(m => m.parent === n.hash).length;
+  const known = list.filter(n => n.quoteCount != null);
+  return {
+    root: root.hash, fetchedAt: new Date().toISOString(), live: true, deep, nodes: list,
+    audit: {
+      nodes: list.length,
+      knownCounts: known.length,
+      expectedQuotes: known.reduce((a, n) => a + n.quoteCount, 0),
+      foundQuotes: list.length - 1,
+      complete: known.length === list.length && known.every(n => n.found >= n.quoteCount),
+      fidsScanned: fidsSeen,
+      seconds: Math.round((Date.now() - t0) / 1000),
+    },
+  };
+}
+
+/* -------------------------------------------------------------------- layout
+ * A tidy tree: root on the left, each generation to the right, every subtree given a
+ * vertical band of its own and every parent sitting at the middle of its children's
+ * band. That much is standard. The wrinkle is that quote trees are not shaped like the
+ * trees this layout is usually drawn for — they are enormously wide and barely deep,
+ * because most people who quote a cast are never quoted back. Giving each of those
+ * leaves its own row produced an 82-row ribbon two columns wide, which fits on a screen
+ * only by shrinking every photo to a speck.
+ *
+ * So a node's childless children are packed into a grid instead of a column, sized to
+ * come out roughly square. Bands stay disjoint, so nothing can collide; what is given
+ * up is the rule that column position equals generation, and the edges carry that
+ * anyway. The tree above goes from 13,700px tall to about a third of that, which is the
+ * difference between seeing the food and not. */
+function layout(root) {
+  let cursor = 0;
+  (function place(n, depth, x) {
+    n.depth = depth;
+    n.x = x;
+    if (!n.children.length) { n.y = cursor; cursor += CARD_H + GAP_Y; return; }
+
+    const cx = x + CARD_W + GAP_X;
+    const heavy = n.children.filter(c => c.children.length);
+    const light = n.children.filter(c => !c.children.length);
+    const marks = [];
+
+    for (const c of heavy) { place(c, depth + 1, cx); marks.push(c.y); }
+
+    if (light.length) {
+      const cols = Math.max(1, Math.min(6, Math.round(Math.sqrt(light.length))));
+      const rows = Math.ceil(light.length / cols);
+      const top = cursor;
+      light.forEach((c, i) => {
+        c.depth = depth + 1;
+        c.x = cx + (i % cols) * (CARD_W + 22);
+        c.y = top + Math.floor(i / cols) * (CARD_H + GAP_Y);
+      });
+      cursor = top + rows * (CARD_H + GAP_Y);
+      marks.push(top, top + (rows - 1) * (CARD_H + GAP_Y));
+    }
+    n.y = (Math.min(...marks) + Math.max(...marks)) / 2;
+  })(root, 0, 0);
+}
+
+/* -------------------------------------------------------------------- render */
+let byHash = new Map(), view = { x: 0, y: 0, k: 1 };
+
+function build(json) {
+  byHash = new Map(json.nodes.map(n => [n.hash, Object.assign({}, n, { children: [] })]));
+  let root = byHash.get(json.root) || null;
+  for (const n of byHash.values()) {
+    if (!n.parent) continue;
+    const p = byHash.get(n.parent);
+    if (p) p.children.push(n); else n.parent = null;   // orphan: draw it as its own root
+  }
+  if (!root) root = [...byHash.values()].find(n => !n.parent);
+  if (!root) { toast("nothing to draw"); return; }
+  for (const n of byHash.values()) n.children.sort((a, b) => a.ts - b.ts);
+  layout(root);
+  for (const n of byHash.values()) if (n.depth === undefined) { n.depth = 0; n.x = 0; n.y = -1e4; }
+
+  const world = $("world");
+  world.textContent = "";
+  const gE = el("g"), gC = el("g");
+  world.append(gE, gC);
+  for (const n of byHash.values())
+    for (const c of n.children) {
+      const x1 = n.x + CARD_W, y1 = n.y + CARD_H / 2, x2 = c.x, y2 = c.y + CARD_H / 2, mid = (x1 + x2) / 2;
+      const p = el("path", { class: "edge", d: `M${x1},${y1} C${mid},${y1} ${mid},${y2} ${x2},${y2}` });
+      p.dataset.child = c.hash;
+      gE.append(p);
+    }
+  for (const n of byHash.values()) gC.append(card(n));
+
+  const q = byHash.size - 1;
+  $("rootline").innerHTML = `<span>— @${esc(root.author.username)}, ${q} quote${q === 1 ? "" : "s"} deep</span>`;
+  renderAudit(json);
+  openingView(root);
+}
+
+function card(n) {
+  const g = el("g", { class: "card" + (n.parent ? "" : " root"), transform: `translate(${n.x},${n.y})` });
+  g.dataset.hash = n.hash;
+  g.append(el("rect", { class: "frame", width: CARD_W, height: CARD_H }));
+
+  const id = n.hash.slice(2, 10);
+  const img = (n.images || n.urls || []).find(isImage);
+  g.append(el("rect", { x: 6, y: 6, width: CARD_W - 12, height: 92, rx: 7, fill: "#21262d" }));
+  if (img) {
+    const clip = el("clipPath", { id: "c" + id });
+    clip.append(el("rect", { x: 6, y: 6, width: CARD_W - 12, height: 92, rx: 7 }));
+    g.append(clip);
+    g.append(el("image", { href: img, x: 6, y: 6, width: CARD_W - 12, height: 92,
+      preserveAspectRatio: "xMidYMid slice", "clip-path": `url(#c${id})` }));
+  } else {
+    const words = ((n.text || "").replace(/https?:\/\/\S+/g, "").trim() || "(no text)").split(/\s+/);
+    let line = "", ln = 0;
+    const put = t => { const e = el("text", { class: "body", x: 13, y: 24 + ln * 13 }); e.textContent = t; g.append(e); };
+    for (const w of words) {
+      if ((line + " " + w).length > 21) { put(line); line = trunc(w, 21); if (++ln > 4) { line = ""; break; } }
+      else line = line ? line + " " + w : w;
+    }
+    if (line) put(line);
+  }
+
+  const pc = el("clipPath", { id: "p" + id });
+  pc.append(el("circle", { cx: 21, cy: 122, r: 13 }));
+  g.append(pc);
+  g.append(el("circle", { cx: 21, cy: 122, r: 13, fill: "#21262d" }));
+  if (n.author.pfp)
+    g.append(el("image", { href: n.author.pfp, x: 8, y: 109, width: 26, height: 26,
+      preserveAspectRatio: "xMidYMid slice", "clip-path": `url(#p${id})` }));
+
+  const name = el("text", { class: "name", x: 41, y: 120 });
+  name.textContent = "@" + trunc(n.author.username, 13);
+  g.append(name);
+
+  const short = n.quoteCount != null && n.found < n.quoteCount;
+  const sub = el("text", { class: "sub" + (short ? " short" : ""), x: 41, y: 133 });
+  sub.textContent = n.quoteCount == null ? `quoted ${n.found}×` : `${n.found}/${n.quoteCount} quotes`;
+  g.append(sub);
+
+  g.addEventListener("click", e => { e.stopPropagation(); select(n.hash); });
+  return g;
+}
+
+function renderAudit(json) {
+  const a = json.audit;
+  const full = a.knownCounts == null || a.knownCounts === a.nodes;
+  $("audit").innerHTML =
+    (full
+      ? `<b class="${a.complete ? "" : "part"}">${a.foundQuotes}/${a.expectedQuotes}</b> quote-casts recovered`
+      : `<b>${a.foundQuotes}</b> quote-casts recovered <span title="Farcaster's client API, which reports how many quotes a cast has, was not reachable">(expected counts unavailable)</span>`) +
+    `<br>${a.nodes} casts · ${(a.fidsScanned || 0).toLocaleString()} accounts scanned` +
+    (json.live ? ` · live${json.deep ? " deep" : ""}` : "") +
+    `<br>data ${String(json.fetchedAt).slice(0, 16).replace("T", " ")}Z`;
+}
+
+/* ----------------------------------------------------------------- selection */
+function select(hash) {
+  const n = byHash.get(hash);
+  if (!n) return;
+  document.querySelectorAll(".card").forEach(c => c.classList.toggle("sel", c.dataset.hash === hash));
+  const chain = new Set();
+  for (let h = hash; h;) { chain.add(h); h = byHash.get(h) && byHash.get(h).parent; }
+  document.querySelectorAll(".edge").forEach(e => e.classList.toggle("hi", chain.has(e.dataset.child)));
+
+  const short = "0x" + n.hash.slice(2, 10);
+  const all = n.images || n.urls || [];
+  const imgs = all.filter(isImage), links = all.filter(u => !isImage(u));
+  const gap = n.quoteCount != null && n.found < n.quoteCount;
+  $("detailBody").innerHTML =
+    imgs.map(u => `<img class="media" src="${esc(u)}" alt="" loading="lazy" onerror="this.remove()">`).join("") +
+    `<div class="who">
+       <img src="${esc(n.author.pfp)}" alt="" onerror="this.style.visibility='hidden'">
+       <div><b>${esc(n.author.display || n.author.username)}</b>
+       <span>@${esc(n.author.username)} · fid ${n.fid}</span></div>
+     </div>
+     <p class="text">${esc(n.text)}</p>` +
+    links.map(u => `<a class="url" href="${esc(u)}" target="_blank" rel="noopener nofollow ugc">${esc(trunc(u, 60))}</a><br>`).join("") +
+    `<dl>
+       <dt>posted</dt><dd>${new Date(n.ts).toUTCString().replace("GMT", "UTC")}</dd>
+       <dt>depth</dt><dd>${n.depth} — ${n.depth === 0 ? "the original" : n.depth === 1 ? "a direct quote" : "a quote of a quote"}</dd>
+       <dt>quoted by</dt><dd>${n.found}${n.quoteCount == null ? "" : " of " + n.quoteCount}${gap ? " · the rest are not reachable from public data" : ""}</dd>
+       ${n.parent && byHash.get(n.parent) ? `<dt>quotes</dt><dd>@${esc(byHash.get(n.parent).author.username)}</dd>` : ""}
+       <dt>cast</dt><dd>${short}</dd>
+     </dl>
+     <div class="links">
+       <a href="https://farcaster.xyz/${encodeURIComponent(n.author.username)}/${short}" target="_blank" rel="noopener">open on Farcaster ↗</a>
+       <button data-act="reroot" data-h="${n.hash}">make this the root</button>
+       <button data-act="share" data-h="${n.hash}">copy link</button>
+     </div>`;
+  $("detail").classList.add("open");
+}
+
+$("detailBody").addEventListener("click", e => {
+  const b = e.target.closest("button[data-act]");
+  if (!b) return;
+  const n = byHash.get(b.dataset.h);
+  if (b.dataset.act === "reroot") { $("q").value = n.author.username + "/" + n.hash; go(); }
+  else {
+    const u = location.origin + location.pathname + "?cast=" + n.author.username + "/" + n.hash;
+    if (navigator.clipboard) navigator.clipboard.writeText(u).then(() => toast("link copied"), () => toast(u));
+    else toast(u);
+  }
+});
+
+$("close").onclick = () => {
+  $("detail").classList.remove("open");
+  document.querySelectorAll(".card").forEach(c => c.classList.remove("sel"));
+  document.querySelectorAll(".edge").forEach(e => e.classList.remove("hi"));
+};
+
+let toastT;
+function toast(msg) {
+  const t = $("toast"); t.textContent = msg; t.classList.add("on");
+  clearTimeout(toastT); toastT = setTimeout(() => t.classList.remove("on"), 4000);
+}
+
+/* -------------------------------------------------------------- pan and zoom */
+const stage = $("stage"), world = $("world");
+const apply = () => world.setAttribute("transform", `translate(${view.x},${view.y}) scale(${view.k})`);
+
+function bounds() {
+  const ns = [...byHash.values()].filter(n => n.y > -1e3);
+  if (!ns.length) return null;
+  return {
+    x0: Math.min(...ns.map(n => n.x)) - 30, x1: Math.max(...ns.map(n => n.x)) + CARD_W + 30,
+    y0: Math.min(...ns.map(n => n.y)) - 30, y1: Math.max(...ns.map(n => n.y)) + CARD_H + 30,
+  };
+}
+
+const headroom = () => document.querySelector("header").getBoundingClientRect().height + 6;
+
+function fit() {
+  const b = bounds();
+  if (!b) return;
+  const r = stage.getBoundingClientRect(), top = headroom();
+  view.k = Math.min(r.width / (b.x1 - b.x0), (r.height - top) / (b.y1 - b.y0), 1.3);
+  view.x = (r.width - (b.x1 - b.x0) * view.k) / 2 - b.x0 * view.k;
+  view.y = top + (r.height - top - (b.y1 - b.y0) * view.k) / 2 - b.y0 * view.k;
+  apply();
+}
+
+/* Opening on a fit-to-screen view of an 80-cast tree is honest and useless: every card
+ * lands at four percent scale and the whole thing reads as grey confetti. So the first
+ * view is anchored on the root at a zoom where a face and a plate of food are actually
+ * legible, unless the tree is small enough to fit at that size anyway — in which case
+ * fit is the better opening shot. The ⤢ button is always one tap away. */
+function openingView(root) {
+  const b = bounds();
+  if (!b) return;
+  const r = stage.getBoundingClientRect(), top = headroom();
+  const k = Math.min(r.width / (b.x1 - b.x0), (r.height - top) / (b.y1 - b.y0), 1.3);
+  if (k >= 0.5) return fit();
+  // aim to show about three generations across, whatever the screen is; a phone lands
+  // near 0.55 and a laptop at the 0.9 cap, and neither opens on a single giant card
+  view.k = Math.min(0.9, Math.max(0.32, r.width / (3.2 * (CARD_W + GAP_X))));
+  view.x = Math.min(r.width * 0.22, 230) - root.x * view.k;
+  view.y = top + (r.height - top) / 2 - (root.y + CARD_H / 2) * view.k;
+  apply();
+}
+function zoomAt(cx, cy, f) {
+  const k = Math.max(0.05, Math.min(4, view.k * f));
+  view.x = cx - (cx - view.x) * (k / view.k);
+  view.y = cy - (cy - view.y) * (k / view.k);
+  view.k = k; apply();
+}
+
+const pointers = new Map();
+let drag = null, pinch = null;
+stage.addEventListener("pointerdown", e => {
+  if (e.pointerType === "touch") pointers.set(e.pointerId, e);
+  if (pointers.size >= 2) { drag = null; return; }
+  drag = { x: e.clientX, y: e.clientY, vx: view.x, vy: view.y };
+  stage.classList.add("drag");
+  try { stage.setPointerCapture(e.pointerId); } catch {}
+});
+stage.addEventListener("pointermove", e => {
+  if (e.pointerType === "touch" && pointers.has(e.pointerId)) pointers.set(e.pointerId, e);
+  if (pointers.size === 2) {
+    const p = [...pointers.values()];
+    const dist = Math.hypot(p[0].clientX - p[1].clientX, p[0].clientY - p[1].clientY);
+    const cx = (p[0].clientX + p[1].clientX) / 2, cy = (p[0].clientY + p[1].clientY) / 2;
+    if (pinch && pinch.dist > 0) {
+      zoomAt(cx, cy, dist / pinch.dist);
+      view.x += cx - pinch.cx; view.y += cy - pinch.cy; apply();
+    }
+    pinch = { dist, cx, cy }; drag = null; return;
+  }
+  if (!drag) return;
+  view.x = drag.vx + (e.clientX - drag.x); view.y = drag.vy + (e.clientY - drag.y); apply();
+});
+["pointerup", "pointercancel", "pointerleave"].forEach(t => stage.addEventListener(t, e => {
+  pointers.delete(e.pointerId);
+  if (pointers.size < 2) pinch = null;
+  drag = null; stage.classList.remove("drag");
+}));
+stage.addEventListener("wheel", e => {
+  e.preventDefault(); zoomAt(e.clientX, e.clientY, Math.exp(-e.deltaY * 0.0015));
+}, { passive: false });
+
+$("zin").onclick = () => zoomAt(innerWidth / 2, innerHeight / 2, 1.3);
+$("zout").onclick = () => zoomAt(innerWidth / 2, innerHeight / 2, 1 / 1.3);
+$("fit").onclick = fit;
+addEventListener("resize", fit);
+addEventListener("keydown", e => { if (e.key === "Escape") $("close").click(); });
+
+/* --------------------------------------------------------------------- driver */
+$("cancel").onclick = () => { cancelled = true; toast("stopping — drawing what is already found"); };
+
+let running = false;
+async function go() {
+  if (running) return toast("already building one");
+  const q = $("q").value.trim();
+  if (!q) return toast("paste a cast link first");
+  running = true; cancelled = false;
+  $("prog").classList.add("on");
+  $("progBar").style.width = "3%";
+  $("progText").textContent = "resolving the cast…";
+  try {
+    const { fid, hash } = await resolve(q);
+    const json = await crawl(fid, hash, $("deep").checked, p => {
+      $("progText").textContent = p.total
+        ? `${p.phase} — ${p.done.toLocaleString()}/${p.total.toLocaleString()}, ${p.nodes} casts in the tree`
+        : `${p.phase}`;
+      $("progBar").style.width = (p.total ? Math.max(3, p.done / p.total * 100) : 3).toFixed(1) + "%";
+    });
+    build(json);
+    history.replaceState(null, "", location.pathname + "?cast=" + encodeURIComponent(q));
+  } catch (e) {
+    toast(e.message || String(e));
+  } finally {
+    running = false; cancelled = false; $("prog").classList.remove("on");
+  }
+}
+
+$("load").onclick = go;
+$("q").addEventListener("keydown", e => { if (e.key === "Enter") go(); });
+$("featured").onclick = () => {
+  $("q").value = "";
+  history.replaceState(null, "", location.pathname);
+  loadFeatured();
+};
+
+function loadFeatured() {
+  fetch("tree.json").then(r => r.json()).then(build)
+    .catch(e => toast("could not load the example — " + e.message));
+}
+
+const qs = new URLSearchParams(location.search).get("cast");
+if (qs) { $("q").value = qs; go(); } else loadFeatured();
+</script>
+</body>
+</html>

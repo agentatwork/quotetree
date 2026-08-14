@@ -1,0 +1,1525 @@
+{
+ "root": "0x3db990553cbe9e8e8993504624b5c2aaf483aa73",
+ "fetchedAt": "2026-08-14T18:11:17.912Z",
+ "nodes": [
+  {
+   "hash": "0x3db990553cbe9e8e8993504624b5c2aaf483aa73",
+   "fid": 429,
+   "parent": null,
+   "ts": 1786469335000,
+   "text": "this is interesting. \n\nusing only food, where did you grow up. \n\nhttps://x.com/austen/status/2087120093767471143?s=46",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/3182693b-0ad0-472f-198e-abb5ebc5b200/original"
+   ],
+   "quoteCount": 11,
+   "author": {
+    "fid": 429,
+    "username": "czar",
+    "display": "czar",
+    "pfp": "https://lh3.googleusercontent.com/X0af6snDGRShmvCYTza1s0WXDssHuvXV5lsQOv-8E_dWTlo89CbZ1gd-Ty5yaLNEZ6klrswNjHU_lPybSAep336eDxY9Ik7L0uC8aw"
+   },
+   "found": 10
+  },
+  {
+   "hash": "0x63b77b18ba068a214a4a1b7081c0e7e5720a9b82",
+   "fid": 6622,
+   "parent": "0x3db990553cbe9e8e8993504624b5c2aaf483aa73",
+   "ts": 1786501415000,
+   "text": "what about you?",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/66d3be9f-2259-4bf6-dec5-7b6680784e00/original"
+   ],
+   "quoteCount": 0,
+   "author": {
+    "fid": 6622,
+    "username": "frdysk",
+    "display": "frdysk",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/f840ec61-fd9a-44dc-c83d-b3f2eb5f0000/original"
+   },
+   "found": 0
+  },
+  {
+   "hash": "0xad26514cad597f8565f688bef1f37b0417fd5950",
+   "fid": 269091,
+   "parent": "0x3db990553cbe9e8e8993504624b5c2aaf483aa73",
+   "ts": 1786472025000,
+   "text": "Where did you grow up?",
+   "images": [
+    "https://res.cloudinary.com/durbgdsd3/image/upload/v1786472016/wtxdtcfqhjz58rw7f7ls.jpg"
+   ],
+   "quoteCount": 10,
+   "author": {
+    "fid": 269091,
+    "username": "nickysap",
+    "display": "nick",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/c7bc3fb3-7fe6-4bbf-86c4-af4cb983b700/original"
+   },
+   "found": 9
+  },
+  {
+   "hash": "0xe4eaa2494392e00b649143eaca847c1a1d6d6b51",
+   "fid": 11213,
+   "parent": "0x3db990553cbe9e8e8993504624b5c2aaf483aa73",
+   "ts": 1786480696000,
+   "text": "This is interesting.\n\nUsing only food, where did you grow up.",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/321376ff-c56e-44dc-a853-4b2659220c00/original"
+   ],
+   "quoteCount": 0,
+   "author": {
+    "fid": 11213,
+    "username": "petar",
+    "display": "kashev",
+    "pfp": "https://i.imgur.com/MaXqYjG.jpg"
+   },
+   "found": 0
+  },
+  {
+   "hash": "0x436ca871c43ea2bbd7571fe8b967e358a5c1308f",
+   "fid": 685132,
+   "parent": "0x3db990553cbe9e8e8993504624b5c2aaf483aa73",
+   "ts": 1786542432000,
+   "text": "where did you grow up?",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/befcde97-49c2-4a34-0271-e491c37dc700/original"
+   ],
+   "quoteCount": 0,
+   "author": {
+    "fid": 685132,
+    "username": "0xbaran.eth",
+    "display": "fid: 685132",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/62fbf589-b35a-40dc-1f80-a489d8733400/original"
+   },
+   "found": 0
+  },
+  {
+   "hash": "0x8bcb2178ba027e4b8293b0f256310a925a15b87f",
+   "fid": 1001428,
+   "parent": "0x3db990553cbe9e8e8993504624b5c2aaf483aa73",
+   "ts": 1786475958000,
+   "text": "",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/54fda05b-e0fb-4016-b683-bf083bb7f000/original"
+   ],
+   "quoteCount": 0,
+   "author": {
+    "fid": 1001428,
+    "username": "farmoar",
+    "display": "farmoar",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/9f92c53a-f5c1-4811-27ff-b2aeb6d66000/original"
+   },
+   "found": 0
+  },
+  {
+   "hash": "0x132f935874a02e30fff13d5f9b2438c1397c149f",
+   "fid": 191042,
+   "parent": "0xad26514cad597f8565f688bef1f37b0417fd5950",
+   "ts": 1786491788000,
+   "text": "Where did you grow up",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/aa8b1e4e-0677-4333-9bf4-cce5759c5c00/original"
+   ],
+   "quoteCount": 1,
+   "author": {
+    "fid": 191042,
+    "username": "atown",
+    "display": "atown",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/1f836224-2fd1-49b3-26b9-ec5bcb1f2400/original"
+   },
+   "found": 1
+  },
+  {
+   "hash": "0x8743bbd82fa19461df488a9da251b8774e9799ad",
+   "fid": 5818,
+   "parent": "0xad26514cad597f8565f688bef1f37b0417fd5950",
+   "ts": 1786518264000,
+   "text": "Where did you grow up?",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/801cdc71-5bb8-457c-f441-5a61179e4700/original"
+   ],
+   "quoteCount": 4,
+   "author": {
+    "fid": 5818,
+    "username": "adrienne",
+    "display": "adrienne",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/900a94b3-ae49-41c3-7c8c-ebff96a99700/original"
+   },
+   "found": 2
+  },
+  {
+   "hash": "0x8b11e6ce63d936513ad9626cad675d96c849d6dd",
+   "fid": 421661,
+   "parent": "0x3db990553cbe9e8e8993504624b5c2aaf483aa73",
+   "ts": 1786477697000,
+   "text": "Yum yummy 😋",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/fd62d18e-d223-4632-0540-3a1af89cd700/original"
+   ],
+   "quoteCount": 0,
+   "author": {
+    "fid": 421661,
+    "username": "satoushi",
+    "display": "Satoushi",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/73d7909b-c476-4b4c-145b-eb9282ecd700/original"
+   },
+   "found": 0
+  },
+  {
+   "hash": "0x0662097d74c4525de2b288c9ed1d7f577edd31d8",
+   "fid": 4703,
+   "parent": "0x3db990553cbe9e8e8993504624b5c2aaf483aa73",
+   "ts": 1786506296000,
+   "text": "this is cool",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/1e8ca902-4dca-40af-c4d7-a314a3749b00/original"
+   ],
+   "quoteCount": 0,
+   "author": {
+    "fid": 4703,
+    "username": "bytebot",
+    "display": "Colin Charles",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/124634f5-5d2f-40ba-1dd1-9550f6288000/original"
+   },
+   "found": 0
+  },
+  {
+   "hash": "0x9b97d530ec460c63b4d1d9ac11c6ac002fedb61f",
+   "fid": 2112,
+   "parent": "0xad26514cad597f8565f688bef1f37b0417fd5950",
+   "ts": 1786473878000,
+   "text": "Where did you grow up?",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/808dd3d0-7504-4562-7019-e2fba5b9a700/original",
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/264a3076-216d-42ce-c081-46bd130d9200/original"
+   ],
+   "quoteCount": 2,
+   "author": {
+    "fid": 2112,
+    "username": "rubinovitz",
+    "display": "rubinovitz",
+    "pfp": "https://tba-mobile.mypinata.cloud/ipfs/QmU21hW5YLBVymHBz5E1JnNobCfiu3v1PgRC3NfxwPF57Y?pinataGatewayToken=PMz6RFTDuk-300OttNnb_U0PSKbbXQdzLmUqdiEq7lesXcsVK8TK7S5GoOtxRGl2"
+   },
+   "found": 2
+  },
+  {
+   "hash": "0xcd2370452a45e85497bc6b468f79e968adc6d97d",
+   "fid": 1725,
+   "parent": "0xad26514cad597f8565f688bef1f37b0417fd5950",
+   "ts": 1786505965000,
+   "text": "where did you grow up?",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/03444d5c-6201-4e69-99c1-808efa338d00/original"
+   ],
+   "quoteCount": 5,
+   "author": {
+    "fid": 1725,
+    "username": "sayangel",
+    "display": "Angel",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/f06ba86d-eef0-45b2-36d9-13cfddfb0f00/original"
+   },
+   "found": 5
+  },
+  {
+   "hash": "0x1f7d8f2eb4f21e2d8dfa2bdb89527ad1abe10f23",
+   "fid": 4163,
+   "parent": "0x3db990553cbe9e8e8993504624b5c2aaf483aa73",
+   "ts": 1786470132000,
+   "text": "Where did you grow up",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/e36352c1-2fb5-4422-d274-d91f8ac40500/original"
+   ],
+   "quoteCount": 5,
+   "author": {
+    "fid": 4163,
+    "username": "kmacb.eth",
+    "display": "KMac",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/92490581-539d-400b-baec-498061531500/original"
+   },
+   "found": 4
+  },
+  {
+   "hash": "0xb06ef92cebe8e2d6f5ff60d531347dd4a142d5cb",
+   "fid": 4567,
+   "parent": "0xad26514cad597f8565f688bef1f37b0417fd5950",
+   "ts": 1786498244000,
+   "text": "Where did you grow up?",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/99940198-8e63-4b64-2958-8762c1e01600/original"
+   ],
+   "quoteCount": 0,
+   "author": {
+    "fid": 4567,
+    "username": "symbiotech",
+    "display": "Symbiotech",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/9f95b7d3-64d6-41e7-4c03-ddfd8e84df00/original"
+   },
+   "found": 0
+  },
+  {
+   "hash": "0x7717551c9f7292715718f45da8fce8f98d8e5e24",
+   "fid": 280,
+   "parent": "0x1f7d8f2eb4f21e2d8dfa2bdb89527ad1abe10f23",
+   "ts": 1786473518000,
+   "text": "Where did you grow up",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/ccaebb92-e38e-4b72-60cd-7cc663825300/original"
+   ],
+   "quoteCount": 0,
+   "author": {
+    "fid": 280,
+    "username": "vrypan.eth",
+    "display": "Vrypan",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/ec9c8c05-4d82-401f-a5c6-e03cecd76800/original"
+   },
+   "found": 0
+  },
+  {
+   "hash": "0x0c8388558d7516a16bf210d95ce384c06be18cf0",
+   "fid": 4327,
+   "parent": "0x8743bbd82fa19461df488a9da251b8774e9799ad",
+   "ts": 1786541527000,
+   "text": "Where did you grow up?",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/edcc328b-3829-408d-22cc-e6cfa3be4600/original"
+   ],
+   "quoteCount": 4,
+   "author": {
+    "fid": 4327,
+    "username": "cojo.eth",
+    "display": "Cojo",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/e1dad5fb-a836-4599-ec4f-26cccd07db00/original"
+   },
+   "found": 4
+  },
+  {
+   "hash": "0xe4aeaa667e56cb00025b26a5519103463f56a201",
+   "fid": 4905,
+   "parent": "0xad26514cad597f8565f688bef1f37b0417fd5950",
+   "ts": 1786483724000,
+   "text": "using only food, where did you grow up?",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/0290314a-14b9-48c1-c533-857161402500/original"
+   ],
+   "quoteCount": 8,
+   "author": {
+    "fid": 4905,
+    "username": "mxjxn",
+    "display": "Max Jackson",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/f8cdcef6-be13-42ca-3acf-a9e1d6e6c800/original"
+   },
+   "found": 6
+  },
+  {
+   "hash": "0x1ffcdb39e64018b1f3063457a220c1e8497a3d5f",
+   "fid": 5774,
+   "parent": "0x0c8388558d7516a16bf210d95ce384c06be18cf0",
+   "ts": 1786544969000,
+   "text": "Where did you grow up?",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/cf6944a0-7b57-40af-f005-5ceaae12fe00/original"
+   ],
+   "quoteCount": 1,
+   "author": {
+    "fid": 5774,
+    "username": "tldr",
+    "display": "tldr (tim reilly)",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/53a3c037-a0ba-4a23-54ff-2e144ee61e00/original"
+   },
+   "found": 1
+  },
+  {
+   "hash": "0x08efafb22a255eb51635585d6e62e171aa3a6e39",
+   "fid": 880,
+   "parent": "0xad26514cad597f8565f688bef1f37b0417fd5950",
+   "ts": 1786475268000,
+   "text": "",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/878e5df5-7084-4a53-9f87-1e2758a20f00/original"
+   ],
+   "quoteCount": 1,
+   "author": {
+    "fid": 880,
+    "username": "accountless.eth",
+    "display": "accountless.eth",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/fe8e757b-9e17-4d9b-95b6-d9e0ce40ee00/original"
+   },
+   "found": 1
+  },
+  {
+   "hash": "0xc4ff17e4bcd801110975e8c6055aec9d3e9a6c11",
+   "fid": 7715,
+   "parent": "0xcd2370452a45e85497bc6b468f79e968adc6d97d",
+   "ts": 1786559912000,
+   "text": "where did you grow up?",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/82d33a9f-cfe9-4ce4-358c-a2083baa1600/original"
+   ],
+   "quoteCount": 0,
+   "author": {
+    "fid": 7715,
+    "username": "royalaid",
+    "display": "Royal",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/b11f3f82-b27c-4bff-84f7-c203d84f9000/original"
+   },
+   "found": 0
+  },
+  {
+   "hash": "0x82953c636a6f96353b495e55f512adb1fc4985a1",
+   "fid": 528707,
+   "parent": "0x0c8388558d7516a16bf210d95ce384c06be18cf0",
+   "ts": 1786633182000,
+   "text": "Where did u grow up?",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/acc29ddc-5895-4c3d-74f9-68c5ca77a500/original"
+   ],
+   "quoteCount": 0,
+   "author": {
+    "fid": 528707,
+    "username": "ghostbo4.eth",
+    "display": "Ghost",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/0083b3d7-346f-44ab-f228-adcccf062d00/original"
+   },
+   "found": 0
+  },
+  {
+   "hash": "0x0001ae0d38c3ca25c7d5282784204ebf8bb685a7",
+   "fid": 13893,
+   "parent": "0x08efafb22a255eb51635585d6e62e171aa3a6e39",
+   "ts": 1786491298000,
+   "text": "Where did you grow up",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/1978aac1-f3b2-4f41-8f1b-8d5c26a14600/original"
+   ],
+   "quoteCount": 1,
+   "author": {
+    "fid": 13893,
+    "username": "javabu.eth",
+    "display": "Jared",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/863b421a-8d09-4968-d9cd-7b8e8ff71d00/original"
+   },
+   "found": 1
+  },
+  {
+   "hash": "0xf57fb3377417b3f4f37325085413dcbbf1cccd70",
+   "fid": 4163,
+   "parent": "0x1f7d8f2eb4f21e2d8dfa2bdb89527ad1abe10f23",
+   "ts": 1786568322000,
+   "text": "Quote cast someone's food pic & get on the map!",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/1752a70f-3c88-4aa6-3417-9b66e29fd900/original"
+   ],
+   "quoteCount": 0,
+   "author": {
+    "fid": 4163,
+    "username": "kmacb.eth",
+    "display": "KMac",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/92490581-539d-400b-baec-498061531500/original"
+   },
+   "found": 0
+  },
+  {
+   "hash": "0x8b1b88d43b62e8bdf5f623f1549dda39c9726542",
+   "fid": 4167,
+   "parent": "0xe4aeaa667e56cb00025b26a5519103463f56a201",
+   "ts": 1786498072000,
+   "text": "same same",
+   "images": [],
+   "quoteCount": 0,
+   "author": {
+    "fid": 4167,
+    "username": "nounishprof",
+    "display": "Nounish Prof ⌐◧-◧🎩",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/0e0686be-ae1a-47d2-c737-5beecfe21700/rectcrop3"
+   },
+   "found": 0
+  },
+  {
+   "hash": "0x6f8e3ec61befcd56a2be4ab1947f456736214cc3",
+   "fid": 1059075,
+   "parent": "0x0001ae0d38c3ca25c7d5282784204ebf8bb685a7",
+   "ts": 1786508125000,
+   "text": "😋",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/04657ec1-8cbe-465f-60c0-e4984fb8f100/original"
+   ],
+   "quoteCount": 0,
+   "author": {
+    "fid": 1059075,
+    "username": "sugarz.eth",
+    "display": "Sugarz",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/efd328b0-351d-48be-dadb-33003f3b0400/original"
+   },
+   "found": 0
+  },
+  {
+   "hash": "0x4a5ac5e73ad9d8a4ffa47a4e980d54ce7ec20514",
+   "fid": 13089,
+   "parent": "0xad26514cad597f8565f688bef1f37b0417fd5950",
+   "ts": 1786477470000,
+   "text": "Where did you grow up?",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/fa71d72b-880c-4ab5-cb49-5245008f0900/original"
+   ],
+   "quoteCount": 3,
+   "author": {
+    "fid": 13089,
+    "username": "arjantupan",
+    "display": "Arjan | TPG - That Poetry Guy",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/16c48e40-3bba-4dd3-e742-b4f675306600/original"
+   },
+   "found": 3
+  },
+  {
+   "hash": "0x368a17e1acc1257fc111ae56079dba00cac195b5",
+   "fid": 296687,
+   "parent": "0x1f7d8f2eb4f21e2d8dfa2bdb89527ad1abe10f23",
+   "ts": 1786470308000,
+   "text": "Where did you grow up?",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/0c9f738a-f59f-4561-66be-dbafbc6b2c00/original"
+   ],
+   "quoteCount": 3,
+   "author": {
+    "fid": 296687,
+    "username": "jonathancolton",
+    "display": "JC",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/fdb95c34-a098-479f-c8d2-d5efaa6ce000/original"
+   },
+   "found": 3
+  },
+  {
+   "hash": "0x9fc6492a759a64989533e2d3223a61f4df87aece",
+   "fid": 268455,
+   "parent": "0x3db990553cbe9e8e8993504624b5c2aaf483aa73",
+   "ts": 1786472478000,
+   "text": "where did you grow up?",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/604cc6e8-712b-4f37-ec1d-0d96d10b0a00/original"
+   ],
+   "quoteCount": 1,
+   "author": {
+    "fid": 268455,
+    "username": "swim",
+    "display": "𝑺𝒘𝒊𝒎",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/ef2dd9ca-8c1d-4899-1bdf-66608263a200/original"
+   },
+   "found": 1
+  },
+  {
+   "hash": "0xe4cc8e3c166e3214c31cd6cbab86706834d9c663",
+   "fid": 15207,
+   "parent": "0xcd2370452a45e85497bc6b468f79e968adc6d97d",
+   "ts": 1786539163000,
+   "text": "Where did you grow up?",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/2a354fcd-2887-4e5b-4aa1-1e3ce9c41500/original"
+   ],
+   "quoteCount": 0,
+   "author": {
+    "fid": 15207,
+    "username": "joseacabrerav",
+    "display": "Joseph Goats",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/2bcae16b-75a4-422f-7314-e2d24011b500/original"
+   },
+   "found": 0
+  },
+  {
+   "hash": "0xdbd6b080c2a8bd3b641f2be9f54e28eba3762617",
+   "fid": 1116896,
+   "parent": "0x4a5ac5e73ad9d8a4ffa47a4e980d54ce7ec20514",
+   "ts": 1786514282000,
+   "text": "judging just by the food\n\nwhere did you grow up?",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/be5c27dc-1b45-4ca1-ef46-cf80ff48ce00/original"
+   ],
+   "quoteCount": 0,
+   "author": {
+    "fid": 1116896,
+    "username": "dyahayuneer",
+    "display": "dyahayuneer",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/20bb6d3c-bd3c-4af7-82fe-5cc48e3b9f00/original"
+   },
+   "found": 0
+  },
+  {
+   "hash": "0x68cb3aa5d65761edba449c193d4cb716adc8231e",
+   "fid": 247605,
+   "parent": "0xcd2370452a45e85497bc6b468f79e968adc6d97d",
+   "ts": 1786509654000,
+   "text": "Where did you grow up?",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/0d6e0bf3-da73-45c3-a019-7aedf4305a00/original"
+   ],
+   "quoteCount": 0,
+   "author": {
+    "fid": 247605,
+    "username": "strangesmell",
+    "display": "PermaNoob",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/67f0c07f-8c9a-49ad-da70-b3a24d4ba900/original"
+   },
+   "found": 0
+  },
+  {
+   "hash": "0xce4953ebf7368a56bec9590b0b20c5c03bd8d36f",
+   "fid": 776238,
+   "parent": "0x3db990553cbe9e8e8993504624b5c2aaf483aa73",
+   "ts": 1786532482000,
+   "text": "This is the only hint you will get 🌷",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/6c85ec2c-74f4-4c09-8abf-450035d5c700/original"
+   ],
+   "quoteCount": 0,
+   "author": {
+    "fid": 776238,
+    "username": "jappiechulo",
+    "display": "Japichulo",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/0b12aa46-dac9-4fe5-d947-3c97bbf66900/original"
+   },
+   "found": 0
+  },
+  {
+   "hash": "0x3713e545fe0dc14aa328b5238207120e5f8e1701",
+   "fid": 352276,
+   "parent": "0x4a5ac5e73ad9d8a4ffa47a4e980d54ce7ec20514",
+   "ts": 1786509307000,
+   "text": "Where did you grow up?",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/788ff3ca-c5de-4d84-0663-1c137c47e600/original"
+   ],
+   "quoteCount": 0,
+   "author": {
+    "fid": 352276,
+    "username": "cryptonjal",
+    "display": "Njal",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/b807749a-3b2b-44b7-0598-9d10bd115700/original"
+   },
+   "found": 0
+  },
+  {
+   "hash": "0x95b38754e706a8b1b13bb89fae695a785299f093",
+   "fid": 4215,
+   "parent": "0x8743bbd82fa19461df488a9da251b8774e9799ad",
+   "ts": 1786526251000,
+   "text": "Where did you grow up?",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/c8ef6f20-ba58-4766-3061-eafbae0c0300/original"
+   ],
+   "quoteCount": 2,
+   "author": {
+    "fid": 4215,
+    "username": "sa",
+    "display": "simon",
+    "pfp": "https://arweave.net/47YO_NMniMUYzYHHDRlEnkkTwT39IO938FK0Cn6JVfk"
+   },
+   "found": 2
+  },
+  {
+   "hash": "0x88fc744c506274b1eb98d44fee4aa23a7d5f5a14",
+   "fid": 21348,
+   "parent": "0x95b38754e706a8b1b13bb89fae695a785299f093",
+   "ts": 1786528162000,
+   "text": "Where did you grow up?",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/50fb3907-a826-4b69-e596-2f60c9426a00/original"
+   ],
+   "quoteCount": 0,
+   "author": {
+    "fid": 21348,
+    "username": "konohime.eth",
+    "display": "Konohime",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/bc8c94d7-7eb7-443b-5b4b-4b5f94ea4300/original"
+   },
+   "found": 0
+  },
+  {
+   "hash": "0x99c57a61f4d87b4c80137a1cbdbe74af9ffba6e7",
+   "fid": 263685,
+   "parent": "0xcd2370452a45e85497bc6b468f79e968adc6d97d",
+   "ts": 1786542479000,
+   "text": "Where did you grow up?",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/0b51a079-20c2-4477-7705-7adebbc6f400/original"
+   ],
+   "quoteCount": 0,
+   "author": {
+    "fid": 263685,
+    "username": "guerrix.eth",
+    "display": "Guerrix🔵",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/be741019-3581-4bf3-f88d-f50ba5f5b200/original"
+   },
+   "found": 0
+  },
+  {
+   "hash": "0x1e6df36162b37dd3243aeee5f3a7d5038beb2c0d",
+   "fid": 227242,
+   "parent": "0x9b97d530ec460c63b4d1d9ac11c6ac002fedb61f",
+   "ts": 1786476956000,
+   "text": "Where did you grow up?",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/50ad597d-9122-4e39-28a3-40ba9c123900/original"
+   ],
+   "quoteCount": 0,
+   "author": {
+    "fid": 227242,
+    "username": "helladj",
+    "display": "helladj",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/bdcf5c41-a13a-4709-f459-c9b5261ece00/original"
+   },
+   "found": 0
+  },
+  {
+   "hash": "0x9a0bdb5e8568c316726d48f722c788310b7028b3",
+   "fid": 18586,
+   "parent": "0x9b97d530ec460c63b4d1d9ac11c6ac002fedb61f",
+   "ts": 1786492036000,
+   "text": "iykyk where I grew up",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/617b4bbf-d05c-4aeb-1b64-e2258e019e00/original"
+   ],
+   "quoteCount": 0,
+   "author": {
+    "fid": 18586,
+    "username": "links",
+    "display": "links 🏴",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/165a4160-432b-47e8-4f64-41f180ff1300/original"
+   },
+   "found": 0
+  },
+  {
+   "hash": "0xb84ff6390b3b13879f1ae5ab276310d248216ad2",
+   "fid": 340986,
+   "parent": "0x368a17e1acc1257fc111ae56079dba00cac195b5",
+   "ts": 1786470681000,
+   "text": "Where did you grow up?",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/01f637d1-e209-4248-6c91-a057bda68100/original"
+   ],
+   "quoteCount": 0,
+   "author": {
+    "fid": 340986,
+    "username": "trillobyte",
+    "display": "Trillobyte",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/fbbc84c3-6fd5-46af-5fa0-16f5b1a55300/original"
+   },
+   "found": 0
+  },
+  {
+   "hash": "0x45ea7b2ef989f4ecbe5b61e310998ddd6f00a5d1",
+   "fid": 10174,
+   "parent": "0xad26514cad597f8565f688bef1f37b0417fd5950",
+   "ts": 1786472551000,
+   "text": "This is what God eats for breakfast\n\nUsing only food, where did you grow up?",
+   "images": [
+    "https://media.firefly.land/farcaster/98fec430-96cd-4a7b-8b03-bccd70b77640.png"
+   ],
+   "quoteCount": 1,
+   "author": {
+    "fid": 10174,
+    "username": "cryptowenmoon.eth",
+    "display": "Ray F. 🎩",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/f92aab23-6b14-4d61-4f3b-a603be08f100/original"
+   },
+   "found": 1
+  },
+  {
+   "hash": "0x970b37fdb01c2b2131d74316d67d480bb09472ce",
+   "fid": 271878,
+   "parent": "0x0c8388558d7516a16bf210d95ce384c06be18cf0",
+   "ts": 1786543700000,
+   "text": "Where did you grow up?",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/b43aaaf2-ba3d-42b3-b72e-c6428fe5ea00/original"
+   ],
+   "quoteCount": 4,
+   "author": {
+    "fid": 271878,
+    "username": "hyp",
+    "display": "Metaphorical",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/42bafe20-947e-45b3-5ada-3a8add362100/original"
+   },
+   "found": 4
+  },
+  {
+   "hash": "0x8e6c7114cff6b6d54511cc39f970d907f2697451",
+   "fid": 436728,
+   "parent": "0xe4aeaa667e56cb00025b26a5519103463f56a201",
+   "ts": 1786547711000,
+   "text": "Late to the copypasta but anyway, using only food where did you grow up??",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/54f8c796-252f-4586-1507-fe27c5593b00/original"
+   ],
+   "quoteCount": 1,
+   "author": {
+    "fid": 436728,
+    "username": "olystuart",
+    "display": "Stuart",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/d7db08c1-9264-49e3-fcd3-0b7200577100/rectcrop3"
+   },
+   "found": 1
+  },
+  {
+   "hash": "0x2befe5dde815f35c5c4ba19084170764f38ab1a9",
+   "fid": 441956,
+   "parent": "0xcd2370452a45e85497bc6b468f79e968adc6d97d",
+   "ts": 1786531646000,
+   "text": "Where did you grow up?\nhttps://farcaster.xyz/sayangel/0xcd237045",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/30f2e22f-3d50-4c1d-3a08-54f20094d500/original"
+   ],
+   "quoteCount": 1,
+   "author": {
+    "fid": 441956,
+    "username": "arrotu",
+    "display": "Arrotu",
+    "pfp": "https://ipfs.decentralized-content.com/ipfs/QmW5kdX4LcFhsZga3P38gwL1BidqyvqfkSTESuTB6DBm7b/3643.png"
+   },
+   "found": 0
+  },
+  {
+   "hash": "0x509b17dc72b03c34c64afd4e0eb583b411bae89d",
+   "fid": 5037,
+   "parent": "0xe4aeaa667e56cb00025b26a5519103463f56a201",
+   "ts": 1786502647000,
+   "text": "Using only food, where did you grow up?",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/0a3b2c2b-9a2c-4612-cf47-541fdf702f00/original"
+   ],
+   "quoteCount": 2,
+   "author": {
+    "fid": 5037,
+    "username": "earth2travis",
+    "display": "Ξ2T",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/7d1f994a-58b0-41ad-fce1-3efa9a721800/original"
+   },
+   "found": 2
+  },
+  {
+   "hash": "0x9c15feee1459d9ef36231b9c441aab323c199792",
+   "fid": 3335413,
+   "parent": "0x1f7d8f2eb4f21e2d8dfa2bdb89527ad1abe10f23",
+   "ts": 1786498735000,
+   "text": "where I spawned, easy mode",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/32a0be44-6b87-4960-c4a4-3ad6b12f1900/original"
+   ],
+   "quoteCount": 0,
+   "author": {
+    "fid": 3335413,
+    "username": "losek.eth",
+    "display": "losek",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/a46e09e1-52e8-40ff-de86-b278ec2f0000/original"
+   },
+   "found": 0
+  },
+  {
+   "hash": "0x3e000d4dea4a73b531a2a353c35adb70743cb750",
+   "fid": 887819,
+   "parent": "0xe4aeaa667e56cb00025b26a5519103463f56a201",
+   "ts": 1786541102000,
+   "text": "maxwell street polish\nChi-Style Hotdog\nSteakhouse Tomahawk\n(no one here eats deep dish pizza)",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/ec09429b-f87f-4f71-0804-1b5537e36e00/original",
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/e3ed989d-54df-455b-c014-c0e963406100/original",
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/0b74f8e1-a2fd-4736-1b81-147c67766200/original"
+   ],
+   "quoteCount": 0,
+   "author": {
+    "fid": 887819,
+    "username": "mj41fantastican.eth",
+    "display": "milan",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/28fe471f-add4-4915-75d4-07e5914ccd00/original"
+   },
+   "found": 0
+  },
+  {
+   "hash": "0x46a839af65ebda64df3ce2f0bc69c1a1c872889c",
+   "fid": 210045,
+   "parent": "0x132f935874a02e30fff13d5f9b2438c1397c149f",
+   "ts": 1786544974000,
+   "text": "Where did you grow up?",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/36a88538-ea76-4e35-ac86-cf69699ec100/original"
+   ],
+   "quoteCount": 0,
+   "author": {
+    "fid": 210045,
+    "username": "nicolaus",
+    "display": "Nicolaus",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/e98a1726-fed5-413c-49a1-e79ecc0f4d00/original"
+   },
+   "found": 0
+  },
+  {
+   "hash": "0x59cab17f630acad4c3f87f35256ebe6d273bcd30",
+   "fid": 410789,
+   "parent": "0x1ffcdb39e64018b1f3063457a220c1e8497a3d5f",
+   "ts": 1786550320000,
+   "text": "Where did you grow up",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/bdec4423-e297-4a6d-86c0-d574ff3e9400/original"
+   ],
+   "quoteCount": 1,
+   "author": {
+    "fid": 410789,
+    "username": "joec",
+    "display": "Joe 🟦⏳ ⌐◨-◨",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/cb55bdf4-91a5-4305-1576-b99832499e00/original"
+   },
+   "found": 0
+  },
+  {
+   "hash": "0x6c5c7b71a3b1f32df93c873d231ef0130df220f8",
+   "fid": 245124,
+   "parent": "0xe4aeaa667e56cb00025b26a5519103463f56a201",
+   "ts": 1786545269000,
+   "text": "using only food, where did you grow up?",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/1d0b96e3-0a17-48e8-6017-ab9c70bff600/original"
+   ],
+   "quoteCount": 0,
+   "author": {
+    "fid": 245124,
+    "username": "sgniwder",
+    "display": "frederick",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/106714ce-7728-4474-abca-207067daf800/original"
+   },
+   "found": 0
+  },
+  {
+   "hash": "0x7ee6da2210ccdfe543c25927e3f47ae77e3896ca",
+   "fid": 1392286,
+   "parent": "0xe4aeaa667e56cb00025b26a5519103463f56a201",
+   "ts": 1786497368000,
+   "text": "Using only food, where did you grow up?",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/4a327b24-d27f-4590-2788-5e1632b5a300/original"
+   ],
+   "quoteCount": 1,
+   "author": {
+    "fid": 1392286,
+    "username": "lexodonosaurus",
+    "display": "Lil Pastry",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/316d1c4c-e2cd-4dfb-0b36-d4ce84228600/original"
+   },
+   "found": 1
+  },
+  {
+   "hash": "0xdeed29a49d806d13c6f5ca579a7a9a7fc3689f7f",
+   "fid": 1116946,
+   "parent": "0x970b37fdb01c2b2131d74316d67d480bb09472ce",
+   "ts": 1786632014000,
+   "text": "Where did you grow up?",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/450dbf35-ecf4-4650-9704-195cd17dcb00/original"
+   ],
+   "quoteCount": 0,
+   "author": {
+    "fid": 1116946,
+    "username": "bigeon",
+    "display": "Barry B. Bigeon",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/947cf2f4-14dd-49f5-7ef1-58442127e500/original"
+   },
+   "found": 0
+  },
+  {
+   "hash": "0x4a0f388ccc1742ab787f0bcf48b12e73047028fa",
+   "fid": 446581,
+   "parent": "0x368a17e1acc1257fc111ae56079dba00cac195b5",
+   "ts": 1786501058000,
+   "text": "Where did you grow up?\n\nI didn’t grow up here but I did 100km 60 miles from here so the was the closest I could get food wise. \n\nI live here now. \n\nI don’t like it either. 😂",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/906037de-d39e-4853-f7b8-d06d028ac300/original"
+   ],
+   "quoteCount": 0,
+   "author": {
+    "fid": 446581,
+    "username": "phos3",
+    "display": "Phos³ Kathryn & Dave🙏🟦",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/38d78b6c-862a-4009-9acf-6bf49093b500/original"
+   },
+   "found": 0
+  },
+  {
+   "hash": "0x2b9a6aab1d9f1883f92eab6adae5ab57ef0de4dd",
+   "fid": 1285,
+   "parent": "0x0c8388558d7516a16bf210d95ce384c06be18cf0",
+   "ts": 1786596029000,
+   "text": "Where did you grow up?",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/f0edc018-db5a-4f62-9ea8-4cf6aff0a100/original"
+   ],
+   "quoteCount": 0,
+   "author": {
+    "fid": 1285,
+    "username": "0xben88.eth",
+    "display": "Ben",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/87cdef93-6042-44af-c594-779e8efed600/original"
+   },
+   "found": 0
+  },
+  {
+   "hash": "0xfe91db58dad66417c2ec7be6e35465a18bd85504",
+   "fid": 15211,
+   "parent": "0x368a17e1acc1257fc111ae56079dba00cac195b5",
+   "ts": 1786472484000,
+   "text": "Where did you grow up?",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/d22d2908-dff3-4926-581b-674e11a53f00/original"
+   ],
+   "quoteCount": 2,
+   "author": {
+    "fid": 15211,
+    "username": "statuette",
+    "display": "statuette",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/abcc8674-79a1-4909-c26e-cefb90909b00/original"
+   },
+   "found": 2
+  },
+  {
+   "hash": "0x6954e3839b01ee6ad35096511d11869a310e490c",
+   "fid": 230238,
+   "parent": "0x4a5ac5e73ad9d8a4ffa47a4e980d54ce7ec20514",
+   "ts": 1786551768000,
+   "text": "Where did you grow up?",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/e7cb980d-1608-4be9-a6b4-06065a686f00/original"
+   ],
+   "quoteCount": 2,
+   "author": {
+    "fid": 230238,
+    "username": "mvr",
+    "display": "mvr 🐹",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/e44cbdfb-5e39-41c2-8a4b-32c994659b00/original"
+   },
+   "found": 2
+  },
+  {
+   "hash": "0x62db8c9f669f573b743ff195985be75ff0599730",
+   "fid": 14217,
+   "parent": "0x509b17dc72b03c34c64afd4e0eb583b411bae89d",
+   "ts": 1786523459000,
+   "text": "Using only food, where did you grow up?",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/fc6e8687-a13b-4439-c06e-4c81ee02c300/original"
+   ],
+   "quoteCount": 0,
+   "author": {
+    "fid": 14217,
+    "username": "boiler",
+    "display": "Boiler(Chris)",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/bfbfb734-6d99-44af-3e82-01356fc73900/original"
+   },
+   "found": 0
+  },
+  {
+   "hash": "0x02567df2d4e33a9506f3eb58ae1aee57112852e3",
+   "fid": 196957,
+   "parent": "0x970b37fdb01c2b2131d74316d67d480bb09472ce",
+   "ts": 1786632069000,
+   "text": "Where did you grow up?",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/67460498-146f-492f-12b2-e300a83e6700/original"
+   ],
+   "quoteCount": 1,
+   "author": {
+    "fid": 196957,
+    "username": "baseddesigner.eth",
+    "display": "max",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/3a2e7305-09e8-4ec3-5697-8db09dc99900/original"
+   },
+   "found": 1
+  },
+  {
+   "hash": "0x5d78ac5d0b480bc07529c81c871a6090bb122664",
+   "fid": 7143,
+   "parent": "0x95b38754e706a8b1b13bb89fae695a785299f093",
+   "ts": 1786553951000,
+   "text": "Wisconsin. Underrated state",
+   "images": [],
+   "quoteCount": 0,
+   "author": {
+    "fid": 7143,
+    "username": "six",
+    "display": "six",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/76988c98-31b9-4540-377e-628f39107f00/original"
+   },
+   "found": 0
+  },
+  {
+   "hash": "0x093412d8f73b4f6ef823bd7ea34a7e956ad423c0",
+   "fid": 4923,
+   "parent": "0x02567df2d4e33a9506f3eb58ae1aee57112852e3",
+   "ts": 1786633006000,
+   "text": "where i grew up",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/e031b456-a701-4b84-d89f-d952c87da500/original"
+   ],
+   "quoteCount": 1,
+   "author": {
+    "fid": 4923,
+    "username": "antimofm.eth",
+    "display": "Antimo",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/a5d945be-c02d-4be5-1ea1-53125edab000/original"
+   },
+   "found": 1
+  },
+  {
+   "hash": "0xcce9b7a4f1b7651d3d947db4cddfbcbb98d3abff",
+   "fid": 14364,
+   "parent": "0x9fc6492a759a64989533e2d3223a61f4df87aece",
+   "ts": 1786481420000,
+   "text": "",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/da677262-8d2a-4ca4-3df6-40836f909d00/original"
+   ],
+   "quoteCount": 0,
+   "author": {
+    "fid": 14364,
+    "username": "purp",
+    "display": "Purp now 100% NSPM 7 Compliant",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/70bf0dfa-b6d7-4c38-24d2-c45cc87e3000/original"
+   },
+   "found": 0
+  },
+  {
+   "hash": "0x773c99a83e5ce51243ba345ff7d956d31938df04",
+   "fid": 1356,
+   "parent": "0x509b17dc72b03c34c64afd4e0eb583b411bae89d",
+   "ts": 1786543931000,
+   "text": "using only food, where did you grow up?",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/b7151f69-039f-42bb-961f-3638b1c19e00/original"
+   ],
+   "quoteCount": 2,
+   "author": {
+    "fid": 1356,
+    "username": "borodutch",
+    "display": "borodutch",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/d64c8aea-b2db-4028-ad43-6926c9099e00/original"
+   },
+   "found": 2
+  },
+  {
+   "hash": "0x53fc9999ad84b344054074079527c5c2c779c9b9",
+   "fid": 880,
+   "parent": "0x970b37fdb01c2b2131d74316d67d480bb09472ce",
+   "ts": 1786561160000,
+   "text": "this whole quote cast theme is an example of what makes Farcaster great",
+   "images": [],
+   "quoteCount": 0,
+   "author": {
+    "fid": 880,
+    "username": "accountless.eth",
+    "display": "accountless.eth",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/fe8e757b-9e17-4d9b-95b6-d9e0ce40ee00/original"
+   },
+   "found": 0
+  },
+  {
+   "hash": "0x451b36583951788a94ea59b27a10a5cc5aa0eb13",
+   "fid": 849116,
+   "parent": "0x773c99a83e5ce51243ba345ff7d956d31938df04",
+   "ts": 1786544440000,
+   "text": "using only food, where did you grow up?",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/1c41272b-2018-419b-8f3a-c4da81871200/original"
+   ],
+   "quoteCount": 1,
+   "author": {
+    "fid": 849116,
+    "username": "uniquebeing404",
+    "display": "Uniquebeing ♊️",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/fccd9288-36a9-4c8c-01ea-eeb7d7b52700/original"
+   },
+   "found": 1
+  },
+  {
+   "hash": "0xc733ef74b82e21b4445639e3bcfcd2e2f041afa2",
+   "fid": 290249,
+   "parent": "0xfe91db58dad66417c2ec7be6e35465a18bd85504",
+   "ts": 1786474656000,
+   "text": "where did you grow up?🌹",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/e8f5bc8c-8709-4ea7-ef0f-476ae304c500/original"
+   ],
+   "quoteCount": 1,
+   "author": {
+    "fid": 290249,
+    "username": "eduardmsmr",
+    "display": "Eduard🌹",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/671b3f78-b489-4119-7c53-d4119d845d00/original"
+   },
+   "found": 1
+  },
+  {
+   "hash": "0x597475b8a8eff1c89a1ee126c13c43ef5d04a560",
+   "fid": 1319768,
+   "parent": "0x45ea7b2ef989f4ecbe5b61e310998ddd6f00a5d1",
+   "ts": 1786473220000,
+   "text": "Where did you grow up?",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/d30a5ea6-29ff-42d4-62a1-e2be638d0400/original"
+   ],
+   "quoteCount": 1,
+   "author": {
+    "fid": 1319768,
+    "username": "leonortoledo",
+    "display": "Leonor",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/604a477e-36d8-4421-d79c-ee8d4c603200/original"
+   },
+   "found": 1
+  },
+  {
+   "hash": "0xba1a246fb9a5b9f2160b8f3350986f48134c85e1",
+   "fid": 416672,
+   "parent": "0x773c99a83e5ce51243ba345ff7d956d31938df04",
+   "ts": 1786545341000,
+   "text": "Using only food, where did you grow up?",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/d3f9715e-6521-4a64-a1eb-6501ede90300/original"
+   ],
+   "quoteCount": 3,
+   "author": {
+    "fid": 416672,
+    "username": "karsaorlongdong",
+    "display": "Karsaorlongdong",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/a3b88414-58a2-4bac-1b35-f44af5598200/original"
+   },
+   "found": 3
+  },
+  {
+   "hash": "0xa99a9e999fb6c0a2e2b11dd8a4f62fbc0e91e4cd",
+   "fid": 10799,
+   "parent": "0xfe91db58dad66417c2ec7be6e35465a18bd85504",
+   "ts": 1786473608000,
+   "text": "where did you grow up?",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/df2399f1-dead-4e99-9369-3a5f2a9a7a00/original"
+   ],
+   "quoteCount": 0,
+   "author": {
+    "fid": 10799,
+    "username": "leaolmos.eth",
+    "display": "lea",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/9744ef86-a866-484f-3dbe-c7a935bd1f00/original"
+   },
+   "found": 0
+  },
+  {
+   "hash": "0x99f142974b17a35f1970f798c37fc86d10926cdc",
+   "fid": 211275,
+   "parent": "0x7ee6da2210ccdfe543c25927e3f47ae77e3896ca",
+   "ts": 1786550801000,
+   "text": "Using only food, where did you grow up?",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/a4ddb03a-c948-4b33-7f3d-eb3f4c0c2b00/original"
+   ],
+   "quoteCount": 2,
+   "author": {
+    "fid": 211275,
+    "username": "bornelder.eth",
+    "display": "Uncle B 💊💉",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/81eeff84-680c-4130-00a7-968e3489ef00/original"
+   },
+   "found": 2
+  },
+  {
+   "hash": "0x53724b88ff1d88460ece14a04848179238e56558",
+   "fid": 271878,
+   "parent": "0x970b37fdb01c2b2131d74316d67d480bb09472ce",
+   "ts": 1786563570000,
+   "text": "At the cross street of this:",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/9bc07ffc-709c-4585-a7c9-fe1764a79a00/original"
+   ],
+   "quoteCount": 0,
+   "author": {
+    "fid": 271878,
+    "username": "hyp",
+    "display": "Metaphorical",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/42bafe20-947e-45b3-5ada-3a8add362100/original"
+   },
+   "found": 0
+  },
+  {
+   "hash": "0xef6ef8525a4864e5c6e6ef67fb9c31d6300b4d11",
+   "fid": 436728,
+   "parent": "0x8e6c7114cff6b6d54511cc39f970d907f2697451",
+   "ts": 1786559076000,
+   "text": "Wait how did I not think of this one first",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/a6586268-275b-4b69-bcc3-e183c05aaa00/original"
+   ],
+   "quoteCount": 0,
+   "author": {
+    "fid": 436728,
+    "username": "olystuart",
+    "display": "Stuart",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/d7db08c1-9264-49e3-fcd3-0b7200577100/rectcrop3"
+   },
+   "found": 0
+  },
+  {
+   "hash": "0x62b7ddfded45dd76227d5c0381aba2ff9dda0014",
+   "fid": 217261,
+   "parent": "0x6954e3839b01ee6ad35096511d11869a310e490c",
+   "ts": 1786556104000,
+   "text": "Where did you grow up?",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/312b814c-796e-45bb-f429-f14b8a1e0f00/original"
+   ],
+   "quoteCount": 0,
+   "author": {
+    "fid": 217261,
+    "username": "duckfacts.eth",
+    "display": "Duxander.base.eth |🎩",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/2ca03f27-7740-4354-1680-4418226cb400/original"
+   },
+   "found": 0
+  },
+  {
+   "hash": "0xd21f876def40126bd6da9010502655f70a10052e",
+   "fid": 1115947,
+   "parent": "0x597475b8a8eff1c89a1ee126c13c43ef5d04a560",
+   "ts": 1786480011000,
+   "text": "Where did you grow up? \n\n🤌",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/03586f00-875f-40a8-8cf2-a93cd9a01800/original"
+   ],
+   "quoteCount": 1,
+   "author": {
+    "fid": 1115947,
+    "username": "cptbased",
+    "display": "Cpt Based",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/fbf2e21f-f966-4335-ab10-777b33795900/original"
+   },
+   "found": 1
+  },
+  {
+   "hash": "0x6016f74a0eb0cde53b1ff98f621a9b5faac68da0",
+   "fid": 1093617,
+   "parent": "0xc733ef74b82e21b4445639e3bcfcd2e2f041afa2",
+   "ts": 1786491412000,
+   "text": "Where did you grow up ?",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/a5809564-5494-48d9-971c-20e066026800/original"
+   ],
+   "quoteCount": 0,
+   "author": {
+    "fid": 1093617,
+    "username": "y8t",
+    "display": "Y8t",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/10964484-d672-485d-9d10-ce4be0ddcc00/original"
+   },
+   "found": 0
+  },
+  {
+   "hash": "0x41c4e6d67e13f1a48cd5ee1908ace109872ffaeb",
+   "fid": 21024,
+   "parent": "0x99f142974b17a35f1970f798c37fc86d10926cdc",
+   "ts": 1786553087000,
+   "text": "Not really a “where” \njust what I ate everyday at home",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/6b3cc803-c497-498e-0445-1034283cd200/original"
+   ],
+   "quoteCount": 0,
+   "author": {
+    "fid": 21024,
+    "username": "terricola.eth",
+    "display": "terricola.sol",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/b4060b5b-2d70-4290-8c22-b6e29e283000/original"
+   },
+   "found": 0
+  },
+  {
+   "hash": "0xaa5ca47f2258a83ca78d9da656874020e27057e0",
+   "fid": 4923,
+   "parent": "0x093412d8f73b4f6ef823bd7ea34a7e956ad423c0",
+   "ts": 1786635318000,
+   "text": "Back in the days when i was younger\nI botti a pallettoni 'nta serranda\nSbucata i vanda a vanda\nI'm from the ground ground unda\nSimu figghioli ca muntagna comu mamma \n\nhttps://www.youtube.com/watch?v=XlJN9O8mno0&list=RDXlJN9O8mno0&start_radio=1\n\nTranslate this neynar",
+   "images": [
+    "https://www.youtube.com/watch?v=XlJN9O8mno0&list=RDXlJN9O8mno0&start_radio=1"
+   ],
+   "quoteCount": 0,
+   "author": {
+    "fid": 4923,
+    "username": "antimofm.eth",
+    "display": "Antimo",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/a5d945be-c02d-4be5-1ea1-53125edab000/original"
+   },
+   "found": 0
+  },
+  {
+   "hash": "0xb194662078c85aff0209a768674a7bf4027559a0",
+   "fid": 285604,
+   "parent": "0x99f142974b17a35f1970f798c37fc86d10926cdc",
+   "ts": 1786553316000,
+   "text": "Using only food, where did you grow up?",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/7ab096e2-6b2f-4120-8c42-152af22d5d00/original"
+   ],
+   "quoteCount": 0,
+   "author": {
+    "fid": 285604,
+    "username": "shuk007.eth",
+    "display": "Shuk007.base.eth",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/9462bcfb-b99c-44dc-b2da-6f2f3b673200/original"
+   },
+   "found": 0
+  },
+  {
+   "hash": "0x407c43e7906e6d173f93b4cfe3e8022ac344c16e",
+   "fid": 948843,
+   "parent": "0xd21f876def40126bd6da9010502655f70a10052e",
+   "ts": 1786500887000,
+   "text": "Where did you grow up? 🌹",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/0e17b7ad-5c77-40ad-5d1b-4c812dcadd00/original"
+   ],
+   "quoteCount": 0,
+   "author": {
+    "fid": 948843,
+    "username": "bossboss",
+    "display": "BossBoss",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/a969ec7a-679d-460d-e4dd-e5855b4bc800/original"
+   },
+   "found": 0
+  },
+  {
+   "hash": "0x5a3e02b36ddcb41c651b98d2238e6999105f99c2",
+   "fid": 1111249,
+   "parent": "0x6954e3839b01ee6ad35096511d11869a310e490c",
+   "ts": 1786557544000,
+   "text": "Where did you grow up?",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/8b58bea6-acf0-4e3a-2e2d-3ef934db6d00/original"
+   ],
+   "quoteCount": 0,
+   "author": {
+    "fid": 1111249,
+    "username": "chengsengchee",
+    "display": "sanchezcheng.base.eth",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/78be7b40-e4cd-4891-cfdd-cff158860b00/original"
+   },
+   "found": 0
+  },
+  {
+   "hash": "0x4a469fcb2146892a248f95e44b07adc862db6181",
+   "fid": 1111249,
+   "parent": "0xba1a246fb9a5b9f2160b8f3350986f48134c85e1",
+   "ts": 1786545921000,
+   "text": "using only food, where did you grow up?",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/57fe40ba-a10e-40e9-1c7e-bf883b4bf800/original"
+   ],
+   "quoteCount": 0,
+   "author": {
+    "fid": 1111249,
+    "username": "chengsengchee",
+    "display": "sanchezcheng.base.eth",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/78be7b40-e4cd-4891-cfdd-cff158860b00/original"
+   },
+   "found": 0
+  },
+  {
+   "hash": "0xc5681c8ad61b6ccd75fa530c8137116d56d65799",
+   "fid": 1111249,
+   "parent": "0x451b36583951788a94ea59b27a10a5cc5aa0eb13",
+   "ts": 1786545840000,
+   "text": "using only food, where did you grow up?",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/29bd5416-9526-48a5-5c73-42bf7cf22200/original"
+   ],
+   "quoteCount": 0,
+   "author": {
+    "fid": 1111249,
+    "username": "chengsengchee",
+    "display": "sanchezcheng.base.eth",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/78be7b40-e4cd-4891-cfdd-cff158860b00/original"
+   },
+   "found": 0
+  },
+  {
+   "hash": "0xfa646e631d82d170cd9da7da5e85c2b3b6bce6ef",
+   "fid": 792821,
+   "parent": "0xba1a246fb9a5b9f2160b8f3350986f48134c85e1",
+   "ts": 1786548071000,
+   "text": "Using only food, where did you grow up ?",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/09d56e38-56a1-4278-3c71-034c3683be00/original"
+   ],
+   "quoteCount": 0,
+   "author": {
+    "fid": 792821,
+    "username": "reekieljr",
+    "display": "Reekiel",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/7c0a5ab5-b294-43c9-4ad8-abc293f5ff00/original"
+   },
+   "found": 0
+  },
+  {
+   "hash": "0x048961e2758fa460bb98345dcd124b2886baf4a6",
+   "fid": 1105143,
+   "parent": "0xba1a246fb9a5b9f2160b8f3350986f48134c85e1",
+   "ts": 1786716329000,
+   "text": "Using only food, where did you grow up ?",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/6525ca31-0eab-4354-4e1b-afd7f81cbd00/original"
+   ],
+   "quoteCount": 0,
+   "author": {
+    "fid": 1105143,
+    "username": "jenniethankyou",
+    "display": "Jenniethankyou",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/651dfec3-00c3-47bd-f1d7-e0d6fec4cf00/rectcrop3"
+   },
+   "found": 0
+  }
+ ],
+ "audit": {
+  "nodes": 82,
+  "expectedQuotes": 90,
+  "foundQuotes": 81,
+  "complete": false,
+  "missing": [
+   {
+    "hash": "0x3db990553cbe9e8e8993504624b5c2aaf483aa73",
+    "found": 10,
+    "expected": 11
+   },
+   {
+    "hash": "0xad26514cad597f8565f688bef1f37b0417fd5950",
+    "found": 9,
+    "expected": 10
+   },
+   {
+    "hash": "0x8743bbd82fa19461df488a9da251b8774e9799ad",
+    "found": 2,
+    "expected": 4
+   },
+   {
+    "hash": "0x1f7d8f2eb4f21e2d8dfa2bdb89527ad1abe10f23",
+    "found": 4,
+    "expected": 5
+   },
+   {
+    "hash": "0xe4aeaa667e56cb00025b26a5519103463f56a201",
+    "found": 6,
+    "expected": 8
+   },
+   {
+    "hash": "0x2befe5dde815f35c5c4ba19084170764f38ab1a9",
+    "found": 0,
+    "expected": 1
+   },
+   {
+    "hash": "0x59cab17f630acad4c3f87f35256ebe6d273bcd30",
+    "found": 0,
+    "expected": 1
+   }
+  ],
+  "fidsScanned": 14364,
+  "apiCalls": 15255,
+  "seconds": 936
+ }
+}
