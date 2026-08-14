@@ -1,6 +1,6 @@
 {
  "root": "0x3db990553cbe9e8e8993504624b5c2aaf483aa73",
- "fetchedAt": "2026-08-14T18:11:17.912Z",
+ "fetchedAt": "2026-08-14T19:08:23.536Z",
  "nodes": [
   {
    "hash": "0x3db990553cbe9e8e8993504624b5c2aaf483aa73",
@@ -18,7 +18,7 @@
     "display": "czar",
     "pfp": "https://lh3.googleusercontent.com/X0af6snDGRShmvCYTza1s0WXDssHuvXV5lsQOv-8E_dWTlo89CbZ1gd-Ty5yaLNEZ6klrswNjHU_lPybSAep336eDxY9Ik7L0uC8aw"
    },
-   "found": 10
+   "found": 11
   },
   {
    "hash": "0x63b77b18ba068a214a4a1b7081c0e7e5720a9b82",
@@ -54,7 +54,7 @@
     "display": "nick",
     "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/c7bc3fb3-7fe6-4bbf-86c4-af4cb983b700/original"
    },
-   "found": 9
+   "found": 10
   },
   {
    "hash": "0xe4eaa2494392e00b649143eaca847c1a1d6d6b51",
@@ -70,7 +70,11 @@
     "fid": 11213,
     "username": "petar",
     "display": "kashev",
-    "pfp": "https://i.imgur.com/MaXqYjG.jpg"
+    "pfp": "https://i.imgur.com/MaXqYjG.jpg",
+    "loc": {
+     "lat": 42.7,
+     "lon": 23.32
+    }
    },
    "found": 0
   },
@@ -106,7 +110,11 @@
     "fid": 1001428,
     "username": "farmoar",
     "display": "farmoar",
-    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/9f92c53a-f5c1-4811-27ff-b2aeb6d66000/original"
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/9f92c53a-f5c1-4811-27ff-b2aeb6d66000/original",
+    "loc": {
+     "lat": 26.12,
+     "lon": 91.71
+    }
    },
    "found": 0
   },
@@ -124,7 +132,11 @@
     "fid": 191042,
     "username": "atown",
     "display": "atown",
-    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/1f836224-2fd1-49b3-26b9-ec5bcb1f2400/original"
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/1f836224-2fd1-49b3-26b9-ec5bcb1f2400/original",
+    "loc": {
+     "lat": 33.75,
+     "lon": -84.39
+    }
    },
    "found": 1
   },
@@ -142,9 +154,13 @@
     "fid": 5818,
     "username": "adrienne",
     "display": "adrienne",
-    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/900a94b3-ae49-41c3-7c8c-ebff96a99700/original"
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/900a94b3-ae49-41c3-7c8c-ebff96a99700/original",
+    "loc": {
+     "lat": 40.71,
+     "lon": -74.01
+    }
    },
-   "found": 2
+   "found": 3
   },
   {
    "hash": "0x8b11e6ce63d936513ad9626cad675d96c849d6dd",
@@ -178,7 +194,11 @@
     "fid": 4703,
     "username": "bytebot",
     "display": "Colin Charles",
-    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/124634f5-5d2f-40ba-1dd1-9550f6288000/original"
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/124634f5-5d2f-40ba-1dd1-9550f6288000/original",
+    "loc": {
+     "lat": 3.15,
+     "lon": 101.69
+    }
    },
    "found": 0
   },
@@ -197,7 +217,11 @@
     "fid": 2112,
     "username": "rubinovitz",
     "display": "rubinovitz",
-    "pfp": "https://tba-mobile.mypinata.cloud/ipfs/QmU21hW5YLBVymHBz5E1JnNobCfiu3v1PgRC3NfxwPF57Y?pinataGatewayToken=PMz6RFTDuk-300OttNnb_U0PSKbbXQdzLmUqdiEq7lesXcsVK8TK7S5GoOtxRGl2"
+    "pfp": "https://tba-mobile.mypinata.cloud/ipfs/QmU21hW5YLBVymHBz5E1JnNobCfiu3v1PgRC3NfxwPF57Y?pinataGatewayToken=PMz6RFTDuk-300OttNnb_U0PSKbbXQdzLmUqdiEq7lesXcsVK8TK7S5GoOtxRGl2",
+    "loc": {
+     "lat": 40.71,
+     "lon": -74.01
+    }
    },
    "found": 2
   },
@@ -251,7 +275,11 @@
     "fid": 4567,
     "username": "symbiotech",
     "display": "Symbiotech",
-    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/9f95b7d3-64d6-41e7-4c03-ddfd8e84df00/original"
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/9f95b7d3-64d6-41e7-4c03-ddfd8e84df00/original",
+    "loc": {
+     "lat": 50.27,
+     "lon": -119.27
+    }
    },
    "found": 0
   },
@@ -287,7 +315,11 @@
     "fid": 4327,
     "username": "cojo.eth",
     "display": "Cojo",
-    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/e1dad5fb-a836-4599-ec4f-26cccd07db00/original"
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/e1dad5fb-a836-4599-ec4f-26cccd07db00/original",
+    "loc": {
+     "lat": 40.71,
+     "lon": -74.01
+    }
    },
    "found": 4
   },
@@ -305,9 +337,13 @@
     "fid": 4905,
     "username": "mxjxn",
     "display": "Max Jackson",
-    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/f8cdcef6-be13-42ca-3acf-a9e1d6e6c800/original"
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/f8cdcef6-be13-42ca-3acf-a9e1d6e6c800/original",
+    "loc": {
+     "lat": 42.36,
+     "lon": -71.06
+    }
    },
-   "found": 6
+   "found": 7
   },
   {
    "hash": "0x1ffcdb39e64018b1f3063457a220c1e8497a3d5f",
@@ -341,7 +377,11 @@
     "fid": 880,
     "username": "accountless.eth",
     "display": "accountless.eth",
-    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/fe8e757b-9e17-4d9b-95b6-d9e0ce40ee00/original"
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/fe8e757b-9e17-4d9b-95b6-d9e0ce40ee00/original",
+    "loc": {
+     "lat": 32.72,
+     "lon": -117.16
+    }
    },
    "found": 1
   },
@@ -359,7 +399,11 @@
     "fid": 7715,
     "username": "royalaid",
     "display": "Royal",
-    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/b11f3f82-b27c-4bff-84f7-c203d84f9000/original"
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/b11f3f82-b27c-4bff-84f7-c203d84f9000/original",
+    "loc": {
+     "lat": -77.85,
+     "lon": 166.67
+    }
    },
    "found": 0
   },
@@ -377,7 +421,11 @@
     "fid": 528707,
     "username": "ghostbo4.eth",
     "display": "Ghost",
-    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/0083b3d7-346f-44ab-f228-adcccf062d00/original"
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/0083b3d7-346f-44ab-f228-adcccf062d00/original",
+    "loc": {
+     "lat": 34.56,
+     "lon": 69.21
+    }
    },
    "found": 0
   },
@@ -395,7 +443,11 @@
     "fid": 13893,
     "username": "javabu.eth",
     "display": "Jared",
-    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/863b421a-8d09-4968-d9cd-7b8e8ff71d00/original"
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/863b421a-8d09-4968-d9cd-7b8e8ff71d00/original",
+    "loc": {
+     "lat": 39.53,
+     "lon": -119.81
+    }
    },
    "found": 1
   },
@@ -447,7 +499,11 @@
     "fid": 1059075,
     "username": "sugarz.eth",
     "display": "Sugarz",
-    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/efd328b0-351d-48be-dadb-33003f3b0400/original"
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/efd328b0-351d-48be-dadb-33003f3b0400/original",
+    "loc": {
+     "lat": 25.76,
+     "lon": -80.19
+    }
    },
    "found": 0
   },
@@ -465,9 +521,13 @@
     "fid": 13089,
     "username": "arjantupan",
     "display": "Arjan | TPG - That Poetry Guy",
-    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/16c48e40-3bba-4dd3-e742-b4f675306600/original"
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/16c48e40-3bba-4dd3-e742-b4f675306600/original",
+    "loc": {
+     "lat": 48.89,
+     "lon": 2.13
+    }
    },
-   "found": 3
+   "found": 4
   },
   {
    "hash": "0x368a17e1acc1257fc111ae56079dba00cac195b5",
@@ -519,7 +579,11 @@
     "fid": 15207,
     "username": "joseacabrerav",
     "display": "Joseph Goats",
-    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/2bcae16b-75a4-422f-7314-e2d24011b500/original"
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/2bcae16b-75a4-422f-7314-e2d24011b500/original",
+    "loc": {
+     "lat": 10.48,
+     "lon": -66.9
+    }
    },
    "found": 0
   },
@@ -573,7 +637,11 @@
     "fid": 776238,
     "username": "jappiechulo",
     "display": "Japichulo",
-    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/0b12aa46-dac9-4fe5-d947-3c97bbf66900/original"
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/0b12aa46-dac9-4fe5-d947-3c97bbf66900/original",
+    "loc": {
+     "lat": 52.01,
+     "lon": 4.36
+    }
    },
    "found": 0
   },
@@ -591,7 +659,11 @@
     "fid": 352276,
     "username": "cryptonjal",
     "display": "Njal",
-    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/b807749a-3b2b-44b7-0598-9d10bd115700/original"
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/b807749a-3b2b-44b7-0598-9d10bd115700/original",
+    "loc": {
+     "lat": 52.16,
+     "lon": 4.48
+    }
    },
    "found": 0
   },
@@ -609,7 +681,11 @@
     "fid": 4215,
     "username": "sa",
     "display": "simon",
-    "pfp": "https://arweave.net/47YO_NMniMUYzYHHDRlEnkkTwT39IO938FK0Cn6JVfk"
+    "pfp": "https://arweave.net/47YO_NMniMUYzYHHDRlEnkkTwT39IO938FK0Cn6JVfk",
+    "loc": {
+     "lat": 39.47,
+     "lon": -0.38
+    }
    },
    "found": 2
   },
@@ -645,7 +721,11 @@
     "fid": 263685,
     "username": "guerrix.eth",
     "display": "Guerrix🔵",
-    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/be741019-3581-4bf3-f88d-f50ba5f5b200/original"
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/be741019-3581-4bf3-f88d-f50ba5f5b200/original",
+    "loc": {
+     "lat": 41.21,
+     "lon": -8.33
+    }
    },
    "found": 0
   },
@@ -771,9 +851,13 @@
     "fid": 441956,
     "username": "arrotu",
     "display": "Arrotu",
-    "pfp": "https://ipfs.decentralized-content.com/ipfs/QmW5kdX4LcFhsZga3P38gwL1BidqyvqfkSTESuTB6DBm7b/3643.png"
+    "pfp": "https://ipfs.decentralized-content.com/ipfs/QmW5kdX4LcFhsZga3P38gwL1BidqyvqfkSTESuTB6DBm7b/3643.png",
+    "loc": {
+     "lat": 51.51,
+     "lon": -0.13
+    }
    },
-   "found": 0
+   "found": 1
   },
   {
    "hash": "0x509b17dc72b03c34c64afd4e0eb583b411bae89d",
@@ -827,7 +911,11 @@
     "fid": 887819,
     "username": "mj41fantastican.eth",
     "display": "milan",
-    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/28fe471f-add4-4915-75d4-07e5914ccd00/original"
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/28fe471f-add4-4915-75d4-07e5914ccd00/original",
+    "loc": {
+     "lat": 41.88,
+     "lon": -87.63
+    }
    },
    "found": 0
   },
@@ -845,7 +933,11 @@
     "fid": 210045,
     "username": "nicolaus",
     "display": "Nicolaus",
-    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/e98a1726-fed5-413c-49a1-e79ecc0f4d00/original"
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/e98a1726-fed5-413c-49a1-e79ecc0f4d00/original",
+    "loc": {
+     "lat": 30.27,
+     "lon": -97.74
+    }
    },
    "found": 0
   },
@@ -863,7 +955,11 @@
     "fid": 410789,
     "username": "joec",
     "display": "Joe 🟦⏳ ⌐◨-◨",
-    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/cb55bdf4-91a5-4305-1576-b99832499e00/original"
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/cb55bdf4-91a5-4305-1576-b99832499e00/original",
+    "loc": {
+     "lat": -27.47,
+     "lon": -58.83
+    }
    },
    "found": 0
   },
@@ -881,7 +977,11 @@
     "fid": 245124,
     "username": "sgniwder",
     "display": "frederick",
-    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/106714ce-7728-4474-abca-207067daf800/original"
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/106714ce-7728-4474-abca-207067daf800/original",
+    "loc": {
+     "lat": 42.33,
+     "lon": -83.04
+    }
    },
    "found": 0
   },
@@ -935,7 +1035,11 @@
     "fid": 446581,
     "username": "phos3",
     "display": "Phos³ Kathryn & Dave🙏🟦",
-    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/38d78b6c-862a-4009-9acf-6bf49093b500/original"
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/38d78b6c-862a-4009-9acf-6bf49093b500/original",
+    "loc": {
+     "lat": 42.4,
+     "lon": -82.19
+    }
    },
    "found": 0
   },
@@ -989,7 +1093,11 @@
     "fid": 230238,
     "username": "mvr",
     "display": "mvr 🐹",
-    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/e44cbdfb-5e39-41c2-8a4b-32c994659b00/original"
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/e44cbdfb-5e39-41c2-8a4b-32c994659b00/original",
+    "loc": {
+     "lat": 52.37,
+     "lon": 4.9
+    }
    },
    "found": 2
   },
@@ -1007,7 +1115,11 @@
     "fid": 14217,
     "username": "boiler",
     "display": "Boiler(Chris)",
-    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/bfbfb734-6d99-44af-3e82-01356fc73900/original"
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/bfbfb734-6d99-44af-3e82-01356fc73900/original",
+    "loc": {
+     "lat": 44.07,
+     "lon": -81.74
+    }
    },
    "found": 0
   },
@@ -1025,7 +1137,11 @@
     "fid": 196957,
     "username": "baseddesigner.eth",
     "display": "max",
-    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/3a2e7305-09e8-4ec3-5697-8db09dc99900/original"
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/3a2e7305-09e8-4ec3-5697-8db09dc99900/original",
+    "loc": {
+     "lat": 48.86,
+     "lon": 2.35
+    }
    },
    "found": 1
   },
@@ -1095,7 +1211,11 @@
     "fid": 1356,
     "username": "borodutch",
     "display": "borodutch",
-    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/d64c8aea-b2db-4028-ad43-6926c9099e00/original"
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/d64c8aea-b2db-4028-ad43-6926c9099e00/original",
+    "loc": {
+     "lat": 21.31,
+     "lon": -157.86
+    }
    },
    "found": 2
   },
@@ -1111,7 +1231,11 @@
     "fid": 880,
     "username": "accountless.eth",
     "display": "accountless.eth",
-    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/fe8e757b-9e17-4d9b-95b6-d9e0ce40ee00/original"
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/fe8e757b-9e17-4d9b-95b6-d9e0ce40ee00/original",
+    "loc": {
+     "lat": 32.72,
+     "lon": -117.16
+    }
    },
    "found": 0
   },
@@ -1201,7 +1325,11 @@
     "fid": 10799,
     "username": "leaolmos.eth",
     "display": "lea",
-    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/9744ef86-a866-484f-3dbe-c7a935bd1f00/original"
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/9744ef86-a866-484f-3dbe-c7a935bd1f00/original",
+    "loc": {
+     "lat": -34.6,
+     "lon": -58.38
+    }
    },
    "found": 0
   },
@@ -1219,7 +1347,11 @@
     "fid": 211275,
     "username": "bornelder.eth",
     "display": "Uncle B 💊💉",
-    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/81eeff84-680c-4130-00a7-968e3489ef00/original"
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/81eeff84-680c-4130-00a7-968e3489ef00/original",
+    "loc": {
+     "lat": 40.44,
+     "lon": -80
+    }
    },
    "found": 2
   },
@@ -1273,7 +1405,11 @@
     "fid": 217261,
     "username": "duckfacts.eth",
     "display": "Duxander.base.eth |🎩",
-    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/2ca03f27-7740-4354-1680-4418226cb400/original"
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/2ca03f27-7740-4354-1680-4418226cb400/original",
+    "loc": {
+     "lat": 43.21,
+     "lon": 27.91
+    }
    },
    "found": 0
   },
@@ -1327,7 +1463,11 @@
     "fid": 21024,
     "username": "terricola.eth",
     "display": "terricola.sol",
-    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/b4060b5b-2d70-4290-8c22-b6e29e283000/original"
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/b4060b5b-2d70-4290-8c22-b6e29e283000/original",
+    "loc": {
+     "lat": 45.52,
+     "lon": -122.68
+    }
    },
    "found": 0
   },
@@ -1474,27 +1614,123 @@
     "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/651dfec3-00c3-47bd-f1d7-e0d6fec4cf00/rectcrop3"
    },
    "found": 0
+  },
+  {
+   "hash": "0x8356a934d82d2993847d30158ceaec9a56076c07",
+   "fid": 1544865,
+   "parent": "0x3db990553cbe9e8e8993504624b5c2aaf483aa73",
+   "ts": 1786688376000,
+   "text": "Where did you grow up?",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/56865bc6-8e07-42c7-73a2-754b35e8ab00/original"
+   ],
+   "quoteCount": 0,
+   "found": 0,
+   "author": {
+    "fid": 1544865,
+    "username": "dertibo",
+    "display": "T1LC",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/7a2c8030-925b-4dbe-d88a-6e3d52d3f200/original"
+   }
+  },
+  {
+   "hash": "0xcfe1f1bbddd800b8d5cf1ba4b0d142e7a11ac985",
+   "fid": 785626,
+   "parent": "0xad26514cad597f8565f688bef1f37b0417fd5950",
+   "ts": 1786574648000,
+   "text": "Good",
+   "images": [],
+   "quoteCount": 0,
+   "found": 0,
+   "author": {
+    "fid": 785626,
+    "username": "sp0213",
+    "display": "SEUNG PYO PARK",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/d631015a-8031-4cb7-1475-290c82a3c600/rectcrop3"
+   }
+  },
+  {
+   "hash": "0x69281de171f3913a0d2b86c27ce62782f447a8a0",
+   "fid": 517425,
+   "parent": "0x4a5ac5e73ad9d8a4ffa47a4e980d54ce7ec20514",
+   "ts": 1786524446000,
+   "text": "Where did you grow up ??",
+   "images": [
+    "https://res.cloudinary.com/cmcfqv66/image/upload/v1786524436/fidcaster/uombclg6vsopwjrn1iwr.jpg"
+   ],
+   "quoteCount": 0,
+   "found": 0,
+   "author": {
+    "fid": 517425,
+    "username": "shahbazbaaz",
+    "display": "Shahbaz 💎Ⓜ️👽",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/26e235cc-eec4-4431-fb2d-131d65c0e000/original"
+   }
+  },
+  {
+   "hash": "0xd8dc5ff06da60f51598f0acd95827990ecfbc753",
+   "fid": 368278,
+   "parent": "0x2befe5dde815f35c5c4ba19084170764f38ab1a9",
+   "ts": 1786551413000,
+   "text": "Where did you grow up?",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/a88cb56a-512d-4221-8f13-1bbbe8efbe00/original"
+   ],
+   "quoteCount": 0,
+   "found": 0,
+   "author": {
+    "fid": 368278,
+    "username": "eduxdux",
+    "display": "Eduxdux",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/c4b97e94-d070-4ad1-8339-2a8a615fef00/original"
+   }
+  },
+  {
+   "hash": "0x8bda49cff4ef4c191239f8022ef477b71e884173",
+   "fid": 474867,
+   "parent": "0xe4aeaa667e56cb00025b26a5519103463f56a201",
+   "ts": 1786484061000,
+   "text": "",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/c7335b65-b693-43b1-054d-a0b864d40800/original"
+   ],
+   "quoteCount": 0,
+   "found": 0,
+   "author": {
+    "fid": 474867,
+    "username": "ionoi.eth",
+    "display": "dutch",
+    "pfp": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/edb851e2-71cb-495d-1bab-830d7c495400/original"
+   }
+  },
+  {
+   "hash": "0x82af19de9fbebf1fb0d06f137a9531fd14601be9",
+   "fid": 12111,
+   "parent": "0x8743bbd82fa19461df488a9da251b8774e9799ad",
+   "ts": 1786533220000,
+   "text": "Where did you grow up?",
+   "images": [
+    "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/6d2f5222-8b02-4b57-2daf-c8b2b0095e00/original"
+   ],
+   "quoteCount": 0,
+   "found": 0,
+   "author": {
+    "fid": 12111,
+    "username": "simonapop",
+    "display": "SP",
+    "pfp": "https://i.imgur.com/i6w3eN6.png"
+   }
   }
  ],
  "audit": {
-  "nodes": 82,
+  "nodes": 88,
   "expectedQuotes": 90,
-  "foundQuotes": 81,
+  "foundQuotes": 87,
   "complete": false,
   "missing": [
    {
-    "hash": "0x3db990553cbe9e8e8993504624b5c2aaf483aa73",
-    "found": 10,
-    "expected": 11
-   },
-   {
-    "hash": "0xad26514cad597f8565f688bef1f37b0417fd5950",
-    "found": 9,
-    "expected": 10
-   },
-   {
     "hash": "0x8743bbd82fa19461df488a9da251b8774e9799ad",
-    "found": 2,
+    "found": 3,
     "expected": 4
    },
    {
@@ -1504,13 +1740,8 @@
    },
    {
     "hash": "0xe4aeaa667e56cb00025b26a5519103463f56a201",
-    "found": 6,
+    "found": 7,
     "expected": 8
-   },
-   {
-    "hash": "0x2befe5dde815f35c5c4ba19084170764f38ab1a9",
-    "found": 0,
-    "expected": 1
    },
    {
     "hash": "0x59cab17f630acad4c3f87f35256ebe6d273bcd30",
@@ -1518,8 +1749,8 @@
     "expected": 1
    }
   ],
-  "fidsScanned": 14364,
-  "apiCalls": 15255,
-  "seconds": 936
+  "fidsScanned": 173463,
+  "apiCalls": 174624,
+  "seconds": 2737
  }
 }

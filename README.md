@@ -39,7 +39,7 @@ Farcaster's client API reports a `quoteCount` per cast — how many casts quote 
 the tree therefore knows how many children it *should* have. Each card shows `found/expected`,
 turning amber when it is short, and the corner shows the total:
 
-> **81/90 quote-casts recovered** · 82 casts · 14,364 accounts scanned
+> **87/90 quote-casts recovered** · 88 casts · 173,463 accounts scanned
 
 A reconstructed tree that cannot be checked is a guess. One that can be is a measurement.
 
@@ -56,7 +56,7 @@ the only server dependency in the project, it is optional, and it is 60 lines
 The bounty asked, as a bonus, for a game that reveals where a poster grew up. Nothing public says
 that. Rather than invent it, the map reveals the one location Farcaster actually carries:
 `USER_DATA_TYPE_LOCATION`, a `geo:lat,lon` string the poster typed into their own profile. In the
-example tree 35 of 82 casts have one; the rest simply have no pin, and the page says in both
+example tree 35 of 88 casts have one; the rest simply have no pin, and the page says in both
 places it could mislead you that this is a self-declared *current* location — not where anyone
 grew up, and not where the photo was taken.
 
@@ -118,9 +118,9 @@ Things that cost me time, written down so they don't cost you any:
   `/v2/followers` pages 50 at a time against a 500-request hourly budget — one popular account
   would eat the whole thing.
 - Popular casts have tens of thousands of likers. Paginate with `nextPageToken` and expect it.
-- Profiles can carry `USER_DATA_TYPE_LOCATION` as `geo:lat,lon`. 58 of 75 authors in the example
-  tree have the *message*; only 34 have a non-empty value, so treat "has a location" and "declared
-  a location" as different questions.
+- Profiles can carry `USER_DATA_TYPE_LOCATION` as `geo:lat,lon`. 60 of the 81 authors in the
+  example tree have the *message*; only 34 have a `geo:` value, so treat "has a location" and
+  "declared a location" as different questions.
 - **`castsByParent` never tells you it is done.** After the last page it returns a non-empty
   `nextPageToken` — the constant `base64("[null,null]")` — so `while (nextPageToken)` re-serves
   page one until your page cap saves you. It is silent: nothing errors, you just get the same
