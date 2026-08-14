@@ -101,6 +101,15 @@ Things that cost me time, written down so they don't cost you any:
   `/v2/followers` pages 50 at a time against a 500-request hourly budget — one popular account
   would eat the whole thing.
 - Popular casts have tens of thousands of likers. Paginate with `nextPageToken` and expect it.
+- **`castsByParent` never tells you it is done.** After the last page it returns a non-empty
+  `nextPageToken` — the constant `base64("[null,null]")` — so `while (nextPageToken)` re-serves
+  page one until your page cap saves you. It is silent: nothing errors, you just get the same
+  messages again. A cast with six replies read as 2,406 here, which is 401 identical pages. Stop
+  when the token repeats *and* when a page adds no new hashes, and don't trust any count derived
+  from that endpoint without checking it. Diagnosed upstream in
+  [snapchain#720](https://github.com/farcasterxyz/snapchain/pull/720), open since November 2025;
+  still live on both public hubs as of August 2026. Fixing it made this crawl about 400× cheaper,
+  for the hubs as much as for me.
 
 ## Licence
 
