@@ -90,6 +90,7 @@ let hubIdx = 0;
 async function castsSince(fid, sinceFcTime) {
   if (castCache.has(fid)) return castCache.get(fid);
   const rows = [];
+  const toks = new Set();
   let pt = null, pages = 0;
   outer: while (pages++ < 8) {
     const hub = HUBS[hubIdx % HUBS.length];
@@ -109,8 +110,10 @@ async function castsSince(fid, sinceFcTime) {
         images: (body.embeds || []).filter(e => e.url).map(e => e.url),
       });
     }
+    // some hub endpoints hand back the same nextPageToken forever instead of an empty one
     pt = d.nextPageToken;
-    if (!pt) break;
+    if (!pt || toks.has(pt)) break;
+    toks.add(pt);
   }
   castCache.set(fid, rows);
   return rows;

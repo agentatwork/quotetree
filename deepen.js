@@ -55,16 +55,31 @@ async function pool(items, n, fn) {
     for (let x = it.next(); !x.done; x = it.next()) await fn(x.value);
   }));
 }
+/* Hub pagination does not always terminate. castsByParent and reactionsByCast return a
+ * constant nextPageToken of base64("[null,null]") once the result set is exhausted rather
+ * than an empty one, so the obvious `while (nextPageToken)` loop re-serves page one until
+ * the caller's page cap saves it — a cast with six replies read as 2,406. linksByTargetFid
+ * can hand back a token it has already used. Two guards, and neither trusts the token: stop
+ * if it repeats, and stop if a page adds nothing new. */
 async function hubPaged(path, cap) {
   const out = [];
+  const seen = new Set(), toks = new Set();
   let pt = "", pages = 0;
   do {
     let d;
     try { d = await j(HUBS[hubIdx % HUBS.length] + path + (pt ? `&pageToken=${pt}` : "")); }
     catch { hubIdx++; break; }
-    out.push(...(d.messages || []));
+    let fresh = 0;
+    for (const m of d.messages || []) {
+      const k = m.hash || JSON.stringify(m.data);
+      if (seen.has(k)) continue;
+      seen.add(k); out.push(m); fresh++;
+    }
+    if (!fresh) break;
     pt = d.nextPageToken;
-  } while (pt && out.length < cap && pages++ < 400);
+    if (!pt || toks.has(pt)) break;
+    toks.add(pt);
+  } while (out.length < cap && pages++ < 400);
   return out;
 }
 

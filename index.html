@@ -194,14 +194,29 @@ async function pool(items, n, fn) {
   }));
 }
 
+/* Hub pagination does not always terminate. castsByParent and reactionsByCast return a
+ * constant nextPageToken of base64("[null,null]") once the result set is exhausted rather
+ * than an empty one, so the obvious `while (nextPageToken)` loop re-serves page one until
+ * the caller's page cap saves it — a cast with six replies read as 2,406. linksByTargetFid
+ * can hand back a token it has already used. Two guards, and neither trusts the token: stop
+ * if it repeats, and stop if a page adds nothing new. */
 async function hubPaged(path, cap) {
   const out = [];
+  const seen = new Set(), toks = new Set();
   let pt = "";
   do {
     const d = await hub(path + (pt ? "&pageToken=" + pt : ""));
-    out.push(...(d.messages || []));
+    let fresh = 0;
+    for (const m of d.messages || []) {
+      const k = m.hash || JSON.stringify(m.data);
+      if (seen.has(k)) continue;
+      seen.add(k); out.push(m); fresh++;
+    }
+    if (!fresh) break;
     pt = d.nextPageToken;
-  } while (pt && out.length < cap && !cancelled);
+    if (!pt || toks.has(pt)) break;
+    toks.add(pt);
+  } while (out.length < cap && !cancelled);
   return out;
 }
 
@@ -243,10 +258,10 @@ async function expectedCounts(hashes) {
   for (let i = 0; i < want.length; i += 40) {
     try {
       const r = await fetch(COUNTS + "?hashes=" + want.slice(i, i + 40).join(","));
-      if (!r.ok) return;
+      if (!r.ok) continue;                 // a partial audit beats no audit; see renderAudit
       const d = await r.json();
       for (const k in d) if (typeof d[k] === "number") quoteCounts.set(k.toLowerCase(), d[k]);
-    } catch { return; }
+    } catch { continue; }
   }
 }
 
@@ -353,6 +368,9 @@ async function crawl(rootFid, rootHash, deep, onProgress) {
       nodes: list.length,
       knownCounts: known.length,
       expectedQuotes: known.reduce((a, n) => a + n.quoteCount, 0),
+      // numerator and denominator have to describe the same set of parents, so when some
+      // nodes have no expected count their children are left out of both
+      checkedFound: known.reduce((a, n) => a + n.found, 0),
       foundQuotes: list.length - 1,
       complete: known.length === list.length && known.every(n => n.found >= n.quoteCount),
       fidsScanned: fidsSeen,
@@ -487,13 +505,19 @@ function card(n) {
   return g;
 }
 
+/* Three honest states, never two. If every node's expected count is known the audit is a
+ * fraction. If none is, it is a bare count and says so. In between — the relay answered for
+ * some hashes and not others — it is still a fraction, over the nodes it could check, with
+ * the unchecked ones named rather than folded into the denominator. */
 function renderAudit(json) {
   const a = json.audit;
-  const full = a.knownCounts == null || a.knownCounts === a.nodes;
+  const known = a.knownCounts == null ? a.nodes : a.knownCounts;
+  const gap = a.nodes - known;
   $("audit").innerHTML =
-    (full
-      ? `<b class="${a.complete ? "" : "part"}">${a.foundQuotes}/${a.expectedQuotes}</b> quote-casts recovered`
-      : `<b>${a.foundQuotes}</b> quote-casts recovered <span title="Farcaster's client API, which reports how many quotes a cast has, was not reachable">(expected counts unavailable)</span>`) +
+    (known === 0
+      ? `<b>${a.foundQuotes}</b> quote-casts recovered <span title="Farcaster's client API, which reports how many quotes a cast has, was not reachable">(expected counts unavailable)</span>`
+      : `<b class="${a.complete ? "" : "part"}">${gap ? a.checkedFound : a.foundQuotes}/${a.expectedQuotes}</b> quote-casts recovered` +
+        (gap ? ` <span title="The relay that supplies expected counts did not answer for these casts, so neither they nor their children are counted here.">(${gap} casts unchecked)</span>` : "")) +
     `<br>${a.nodes} casts · ${(a.fidsScanned || 0).toLocaleString()} accounts scanned` +
     (json.live ? ` · live${json.deep ? " deep" : ""}` : "") +
     `<br>data ${String(json.fetchedAt).slice(0, 16).replace("T", " ")}Z`;
