@@ -503,8 +503,12 @@ function build(json) {
     }
   for (const n of byHash.values()) gC.append(card(n));
 
+  /* "N quotes deep" conflated two different numbers. Say both: how many casts quote into
+   * this tree at all, and how many levels of quote-of-a-quote it actually reaches. */
   const q = byHash.size - 1;
-  $("rootline").innerHTML = `<span>— @${esc(root.author.username)}, ${q} quote${q === 1 ? "" : "s"} deep</span>`;
+  const levels = Math.max(...[...byHash.values()].map(n => n.depth));
+  $("rootline").innerHTML = `<span>— @${esc(root.author.username)}, ${q} quote${q === 1 ? "" : "s"}` +
+    (levels > 1 ? `, ${levels} levels deep` : "") + `</span>`;
   renderAudit(json);
   openingView(root);
   if (mapOn) mapBuild();

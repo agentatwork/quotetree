@@ -1,3 +1,3 @@
-@czar asked what everyone was eating. The answer grew into a quote-cast tree 82 casts deep — here it is, drawn.
+@czar asked what everyone was eating. The answer grew into a quote-cast tree 88 casts deep — here it is, drawn.
 
 Every node is a poster, their plate, and an edge back to the cast they quoted. Zoom, pan, tap one. Or open the map and guess where each plate came from.
